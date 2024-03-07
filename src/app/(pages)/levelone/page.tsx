@@ -19,7 +19,7 @@ export default async function LevelOneIndex() {
 								{
 									pages.map(link => (
 										<li key='link'>
-											<Link href={`/${segment}/link`}>{link}</Link>
+											<Link href={`/${segment}/${link}`}>{link}</Link>
 										</li>
 									))
 								}
