@@ -1,0 +1,11 @@
+# yarn
+.yarn/*
+.pnp.*
+yarn.lock
+.vscode/*
+
+# next
+.next/*
+next-env.d.ts
+
+.env.*
