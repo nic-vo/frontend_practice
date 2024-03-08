@@ -7,5 +7,6 @@ yarn.lock
 # next
 .next/*
 next-env.d.ts
+.eslintrc.json
 
 .env.*
