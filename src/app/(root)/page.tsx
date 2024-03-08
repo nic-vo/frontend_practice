@@ -1,6 +1,4 @@
 import Link from 'next/link';
-import fs from 'fs/promises';
-import path from 'path';
 import { getPages } from '@/lib/pages';
 
 export default async function HomePage() {
@@ -11,7 +9,7 @@ export default async function HomePage() {
 	console.log(links)
 	return (
 		<main>
-			<h1>Welcome to my frontend practice repo</h1>
+			<h1 className=''>Welcome to my frontend practice repo</h1>
 			<section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore impedit corporis perspiciatis natus aperiam esse vitae sequi veritatis quam laudantium quas nemo sit, optio aspernatur et molestiae aut consequatur eaque!</section>
 			{
 				links.length === 0 ? <p>Nothing here!</p>
