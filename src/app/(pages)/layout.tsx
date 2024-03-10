@@ -7,8 +7,8 @@ export default function PagesRootLayout(props: PropsWithChildren) {
 	return (
 		<html lang='en'>
 			<body>
-				<header><Link href='/'>Home</Link></header>
 				{props.children}
+				<div className='fixed bottom-4 z-20 p-2 bg-black text-white'><Link href='/'>Home</Link></div>
 			</body>
 		</html>
 	);
