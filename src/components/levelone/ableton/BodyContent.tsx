@@ -3,7 +3,11 @@ import { PropsWithChildren } from 'react';
 import { studio001 } from './images';
 
 export const Section = (props: PropsWithChildren) => {
-	return <section className='w-4/5 lg:max-w-prose'>{props.children}</section>;
+	return (
+		<section className='flex flex-col gap-4 w-4/5 lg:max-w-prose'>
+			{props.children}
+		</section>
+	);
 };
 
 export const Hero = () => {
