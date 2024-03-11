@@ -11,12 +11,14 @@ import globalLook from '@/styles/globals.module.scss';
 
 const Footer = () => {
 	return (
-		<footer className='bg-white flex flex-col items-center w-full max-w-screen-2xl py-12 lg:py-16 text-sm'>
-			<div className='flex-grow w-10/12 flex flex-col gap-12'>
-				<h2 className='font-semibold text-4xl lg:text-6xl'>Ableton</h2>
+		<footer className='bg-white flex flex-col items-center w-full max-w-screen-2xl py-12 lg:py-24 text-sm lg:text-lg'>
+			<div className='flex-grow w-10/12 flex lg:grid flex-col gap-12 lg:gap-16 grid-cols-5 grid-rows-min'>
+				<h2 className='font-semibold text-4xl lg:text-6xl col-span-5'>
+					Ableton
+				</h2>
 				<form
 					action=''
-					className='flex flex-col gap-1'>
+					className='flex flex-col gap-1 lg:order-3 col-span-2'>
 					<h3 className='font-semibold'>Sign up to our newsletter</h3>
 					<label htmlFor='email'>
 						Enter your email address to stay up to date with the latest offers,
@@ -36,9 +38,9 @@ const Footer = () => {
 						</button>
 					</div>
 				</form>
-				<nav className='flex flex-col gap-8'>
+				<nav className='flex flex-col gap-8 col-span-3 lg:order-1 lg:grid grid-cols-2 grid-rows-2 lg:gap-16'>
 					<div className='flex flex-col gap-2'>
-						<ul className='flex flex-col gap-2'>
+						<ul className='flex flex-col gap-2 lg:gap-0'>
 							<li>
 								<a
 									href='https://www.ableton.com/en/account/add_license'
@@ -110,7 +112,7 @@ const Footer = () => {
 					</div>
 					<section className='flex flex-col gap-2'>
 						<h3 className='font-semibold'>Education</h3>
-						<ul className='flex flex-col gap-2'>
+						<ul className='flex flex-col gap-2 lg:gap-0'>
 							<li>
 								<a
 									href='https://www.ableton.com/en/shop/education'
@@ -136,7 +138,7 @@ const Footer = () => {
 					</section>
 					<section className='flex flex-col gap-2'>
 						<h3 className='font-semibold'>Community</h3>
-						<ul className='flex flex-col gap-2'>
+						<ul className='flex flex-col gap-2 lg:gap-0'>
 							<li>
 								<a
 									href='https://www.ableton.com/en/community/user-groups'
@@ -160,9 +162,9 @@ const Footer = () => {
 							</li>
 						</ul>
 					</section>
-					<section className='flex flex-col gap-2'>
+					<section className='flex flex-col gap-2 lg:w-full'>
 						<h3 className='font-semibold'>Language and Location</h3>
-						<div className='flex gap-2'>
+						<div className='flex gap-2 lg:gap-0.5'>
 							<form>
 								<label
 									htmlFor='language'
@@ -172,7 +174,7 @@ const Footer = () => {
 								<select
 									name='language'
 									id='language'
-									className='bg-zinc-200 p-1 font-medium'>
+									className='bg-zinc-200 p-1 font-medium lg:text-sm'>
 									<option value='en'>English</option>
 									<option value='de'>Deutsch</option>
 									<option value='fr'>Français</option>
@@ -181,7 +183,7 @@ const Footer = () => {
 									<option value='es'>Español</option>
 								</select>
 							</form>
-							<form>
+							<form className='flex-grow'>
 								<label
 									htmlFor='location'
 									className={globalLook.hiddenAccessibleText}>
@@ -190,7 +192,7 @@ const Footer = () => {
 								<select
 									name='location'
 									id='location'
-									className='bg-zinc-200 p-1 font-medium'>
+									className='bg-zinc-200 p-1 font-medium lg:text-sm w-full'>
 									<optgroup label='Common Countries'>
 										<option value='United States'>United States</option>
 										<option value='United Kingdom'>United Kingdom</option>
@@ -233,60 +235,40 @@ const Footer = () => {
 							</form>
 						</div>
 					</section>
-					<ul className='flex flex-col gap-2'>
+					<ul className='flex flex-col gap-2 lg:text-sm font-medium lg:flex-row col-span-2'>
 						<li>
-							<a
-								href='https://www.ableton.com/en/contact-us'
-								className='font-medium'>
-								Contact Us
-							</a>
+							<a href='https://www.ableton.com/en/contact-us'>Contact Us</a>
 						</li>
 						<li>
-							<a
-								href='https://www.ableton.com/en/press'
-								className='font-medium'>
-								Press Resources
-							</a>
+							<a href='https://www.ableton.com/en/press'>Press Resources</a>
 						</li>
 						<li>
-							<a
-								href='https://www.ableton.com/en/legal'
-								className='font-medium'>
-								Legal Info
-							</a>
+							<a href='https://www.ableton.com/en/legal'>Legal Info</a>
 						</li>
 						<li>
-							<a
-								href='https://www.ableton.com/en/privacy-policy'
-								className='font-medium'>
+							<a href='https://www.ableton.com/en/privacy-policy'>
 								Privacy Policy
 							</a>
 						</li>
 						<li>
-							<a
-								href='https://www.ableton.com/en/cookie-settings'
-								className='font-medium'>
+							<a href='https://www.ableton.com/en/cookie-settings'>
 								Cookie Settings
 							</a>
 						</li>
 						<li>
-							<a
-								href='https://www.ableton.com/en/imprint'
-								className='font-medium'>
-								Imprint
-							</a>
+							<a href='https://www.ableton.com/en/imprint'>Imprint</a>
 						</li>
 					</ul>
 				</nav>
-				<div className='flex items-center gap-4'>
+				<div className='flex items-center gap-4 lg:absolute lg:bottom-0 lg:right-0 lg:flex-row-reverse'>
 					<a
 						href='https://www.ableton.com/en/'
 						target='_blank'
-						className={`flex z-40 text-3xl ${interactiveLook.logo}`}>
+						className={`flex z-40 text-3xl lg:text-2xl ${interactiveLook.logo}`}>
 						<FaAlignJustify />
 						<FaAlignJustify />
 					</a>
-					<span className='block h-full'>Made in Berlin</span>
+					<span className='block h-full lg:font-medium lg:text-sm'>Made in Berlin</span>
 				</div>
 			</div>
 		</footer>
