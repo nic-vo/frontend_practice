@@ -13,6 +13,7 @@ import {
 } from '@/components/levelone/ableton/images';
 
 import { outfit } from '@/components/levelone/ableton/styles';
+import Cookies from '@/components/levelone/ableton/Cookies';
 
 export default function AbletonAboutPage() {
 	return (
@@ -62,6 +63,7 @@ export default function AbletonAboutPage() {
 				<div className='flex after:h-full after:absolute after:bg-yellow-200 after:w-2/3 after:right-0 after-content:[""]'>
 					<div className='flex items-center w-3/5 p-4 lg:p-16 z-10'>
 						<Image
+							placeholder='blur'
 							src={turntables}
 							alt='Close up shot of a mixing console'
 							sizes='50vw'
@@ -69,6 +71,7 @@ export default function AbletonAboutPage() {
 					</div>
 					<div className='flex items-center w-2/5 p-4 lg:p-16 z-10'>
 						<Image
+							placeholder='blur'
 							src={office001}
 							alt='A man sits towards the back of an arrangement of desks in an office space'
 							sizes='50vw'
@@ -106,11 +109,13 @@ export default function AbletonAboutPage() {
 				<div className='flex items-center after:absolute after:content-[""] after:h-full after:w-3/5 after:bg-green-200'>
 					<div className='flex flex-col p-4 lg:p-16 gap-4 z-10 w-2/5'>
 						<Image
+							placeholder='blur'
 							src={office002}
 							alt='A man writes on a whiteboard'
 							sizes='50vw'
 						/>
 						<Image
+							placeholder='blur'
 							src={office_ext}
 							alt='The exterior of an office building'
 							sizes='50vw'
@@ -118,6 +123,7 @@ export default function AbletonAboutPage() {
 					</div>
 					<div className='p-4 lg:p-16 z-10 w-3/5'>
 						<Image
+							placeholder='blur'
 							src={studio002}
 							alt='A man facing away from the camera towards a mixing console in a studio'
 							sizes='50vw'
@@ -140,6 +146,7 @@ export default function AbletonAboutPage() {
 				</Section>
 				<div className='p-4 lg:p-16 w-10/12 max-w-screen-xl'>
 					<Image
+						placeholder='blur'
 						src={software001}
 						alt='Closeup of a screen with DAW software running'
 						sizes='100vw'
@@ -165,6 +172,7 @@ export default function AbletonAboutPage() {
 				<div className='flex items-center justify-end after:h-full after:absolute after:bg-purple-300 after:w-9/12 after-content:[""] after:right-[16%] gap-4'>
 					<div className='flex items-end w-2/6 py-4 lg:py-16 z-10'>
 						<Image
+							placeholder='blur'
 							src={office003}
 							alt='People in a conference room watch a presentation on the far wall'
 							sizes='50vw'
@@ -172,6 +180,7 @@ export default function AbletonAboutPage() {
 					</div>
 					<div className='flex w-1/2 py-4 lg:py-16 z-10 items-end'>
 						<Image
+							placeholder='blur'
 							src={office004}
 							alt='Two people work intently on their computers'
 							sizes='50vw'
@@ -198,6 +207,7 @@ export default function AbletonAboutPage() {
 				<div className='flex flex-col lg:flex-row w-10/12 max-w-screen-xl'>
 					<div className='lg:w-1/2'>
 						<Image
+							placeholder='blur'
 							src={office005}
 							alt='An open office space with people scattered about at the desks'
 							sizes='100vw'
@@ -217,6 +227,7 @@ export default function AbletonAboutPage() {
 					</section>
 				</div>
 			</main>
+			<Cookies />
 			<Footer />
 		</div>
 	);
