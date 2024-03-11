@@ -10,7 +10,7 @@ import {
 	FaCaretDown,
 } from 'react-icons/fa';
 
-import { outfit } from '@/components/levelone/ableton/styles';
+import { outfit } from '@/app/(pages)/levelone/ableton/_components/styles';
 import interactiveLook from './interactive.module.scss';
 import globalLook from '@/styles/globals.module.scss';
 

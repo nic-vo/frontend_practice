@@ -1,4 +1,9 @@
-import { Header, Section, Hero, Footer } from '@/components/levelone/ableton';
+import {
+	Header,
+	Section,
+	Hero,
+	Footer,
+} from '@/app/(pages)/levelone/ableton/_components';
 import Image from 'next/image';
 import {
 	office001,
@@ -10,12 +15,12 @@ import {
 	software001,
 	studio002,
 	turntables,
-} from '@/components/levelone/ableton/images';
+} from '@/app/(pages)/levelone/ableton/_components/images';
 
-import { outfit } from '@/components/levelone/ableton/styles';
-import Cookies from '@/components/levelone/ableton/Cookies';
+import { outfit } from '@/app/(pages)/levelone/ableton/_components/styles';
+import Cookies from '@/app/(pages)/levelone/ableton/_components/Cookies';
 
-export default function AbletonAboutPage() {
+const AbletonAboutPage = () => {
 	return (
 		<div className='bg-zinc-100 flex flex-col items-center overflow-hidden'>
 			<Header />
@@ -231,7 +236,9 @@ export default function AbletonAboutPage() {
 			<Footer />
 		</div>
 	);
-}
+};
+
+export default AbletonAboutPage;
 
 export const metadata = {
 	title: 'Nic Vo | Ableton Clone',

@@ -20,7 +20,7 @@ const Cookies = () => {
 	return (
 		<dialog
 			ref={dialogRef}
-			className='w-full fixed lg:max-w-prose text-white text-base lg:text-xl bg-black p-4 bottom-0 lg:left-12 lg:bottom-12 z-10'>
+			className='w-full fixed lg:max-w-lg text-white text-base lg:text-xl bg-black p-4 bottom-0 lg:left-12 lg:bottom-12 z-10'>
 			<form
 				method='dialog'
 				className='grid grid-cols-2 gap-3'>
