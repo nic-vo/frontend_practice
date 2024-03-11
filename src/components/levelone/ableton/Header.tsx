@@ -137,7 +137,7 @@ const Header = () => {
 							<a
 								href='https://www.ableton.com/en/trial'
 								target='_blank'
-								className='text-inherit lg:text-blue-600'>
+								className='text-inherit lg:text-blue-700'>
 								Try Live 12 for free
 							</a>
 						</li>
