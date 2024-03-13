@@ -1,7 +1,7 @@
 import LevelOneInfoNav from '../../_layoutcomponents';
 import { OriginalNav } from '@/components/global';
 
-const Thingy = () => {
+const AbletonInfoNav = () => {
 	return (
 		<>
 			<OriginalNav original='https://www.ableton.com/en/about' />
@@ -10,4 +10,4 @@ const Thingy = () => {
 	);
 };
 
-export default Thingy;
+export default AbletonInfoNav;
