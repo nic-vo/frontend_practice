@@ -52,20 +52,18 @@ const DualView = (props: {
 		<>
 			{clone || CloneMissing()}
 			<ToggleAside>
-				<div className='flex flex-col gap-4 p-8 h-full text-lg'>
-					<section className='overflow-hidden flex flex-col gap-4'>
-						{infotitle || InfoTitleMissing()}
-						<div className='flex flex-col gap-4 overflow-y-auto pr-4 font-light'>
-							{info || InfoMissing()}
-						</div>
-					</section>
-					<nav className='flex gap-2 font-light'>
-						<h2>Links:</h2>
-						<ul className='flex gap-2 underline'>
-							{infonav || InfoNavMissing()}
-						</ul>
-					</nav>
-				</div>
+				<section className='overflow-hidden flex flex-col gap-4'>
+					{infotitle || InfoTitleMissing()}
+					<div className='flex flex-col gap-4 overflow-y-auto pr-4 font-light'>
+						{info || InfoMissing()}
+					</div>
+				</section>
+				<nav className='flex gap-2 font-light'>
+					<h2>Links:</h2>
+					<ul className='flex gap-2 underline'>
+						{infonav || InfoNavMissing()}
+					</ul>
+				</nav>
 			</ToggleAside>
 		</>
 	);

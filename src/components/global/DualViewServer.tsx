@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const OriginalNav = (props: { original: string }) => {
 	return (
 		<li>
-			<Link href={props.original}>Original</Link>
+			<Link href={props.original}>Original Site</Link>
 		</li>
 	);
 };
@@ -12,7 +12,7 @@ export const LayoutNav = (props: { upOne: string }) => {
 	return (
 		<>
 			<li>
-				<Link href={props.upOne}>Back</Link>
+				<Link href={props.upOne}>Back to index</Link>
 			</li>
 			<li>
 				<Link href='/'>Home</Link>
