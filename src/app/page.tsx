@@ -4,7 +4,7 @@ import { getPages } from '@/lib/pages';
 const HomePage = async () => {
 	// TODO: Fetch all files in (pages); string[] of links
 
-	const links: string[] = await getPages(['(pages)']);
+	const links: string[] = await getPages(['app']);
 	console.log(links);
 	return (
 		<main>
