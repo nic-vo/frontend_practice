@@ -29,7 +29,7 @@ const weirdDivClasser = (toggled: boolean) => {
 		transitions: 'transition-transform',
 	};
 	const base = Object.values(navContainerClassObject).join(' ');
-	if (!toggled) return base;
+	if (toggled) return base;
 	return base + ' -translate-y-full ' + interactiveLook.toggled;
 };
 
@@ -212,7 +212,7 @@ const Header = () => {
 					<section className={`flex-col gap-4 ${interactiveLook.selDis}`}>
 						<h2 className='text-2xl'>More from Ableton:</h2>
 						<ul className='flex flex-row gap-4 pb-4 text-sm lg:text-base lg:pb-0 lg:gap-8 overflow-x-auto'>
-							<li className='w-1/4 min-w-64 lg:min-w-0 shrink-0 lg:shrink'>
+							<li className='w-1/4 min-w-64 lg:min-w-1/4 shrink-0 lg:shrink'>
 								<a
 									href='https://www.ableton.com/en/blog/categores/loop'
 									target='_blank'>
@@ -223,7 +223,7 @@ const Header = () => {
 									</span>
 								</a>
 							</li>
-							<li className='w-1/4 min-w-64 lg:min-w-0 shrink-0 lg:shrink'>
+							<li className='w-1/4 min-w-64 lg:min-w-1/4 shrink-0 lg:shrink'>
 								<a
 									href='https://learningmusic.ableton.com/'
 									target='_blank'>
@@ -234,7 +234,7 @@ const Header = () => {
 									</span>
 								</a>
 							</li>
-							<li className='w-1/4 min-w-64 lg:min-w- shrink-0 lg:shrink'>
+							<li className='w-1/4 min-w-64 lg:min-w-1/4 shrink-0 lg:shrink'>
 								<a
 									href='https://learningsynths.ableton.com/'
 									target='_blank'>
@@ -245,7 +245,7 @@ const Header = () => {
 									</span>
 								</a>
 							</li>
-							<li className='w-1/4 min-w-64 lg:min-w- shrink-0 lg:shrink'>
+							<li className='w-1/4 min-w-64 lg:min-w-1/4 shrink-0 lg:shrink'>
 								<a
 									href='https://makingmusic.ableton.com/'
 									target='_blank'>
