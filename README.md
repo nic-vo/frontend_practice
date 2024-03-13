@@ -2,6 +2,8 @@
 
 This is the repo containing all my solutions for the sites suggested by [Frontend Practice](https://www.frontendpractice.com/).
 
+I'm taking this as as an opportunity to learn TailwindCSS and some newer features of Next.js's App router. Pretty excited!
+
 1. Level One
 	- Ableton
 	- Abstract
