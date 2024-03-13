@@ -25,12 +25,12 @@ const weirdDivClasser = (toggled: boolean) => {
 		z: 'z-20',
 		gap: 'gap-6',
 		padding: 'p-4 pt-8 lg:pt-4 lg:px-8',
-		translate: 'lg:translate-y-0',
-		transitions: 'transition-transform',
+		transitions: 'transition-transform lg:transition-none',
+		translate: '-translate-y-full lg:translate-y-0',
 	};
 	const base = Object.values(navContainerClassObject).join(' ');
-	if (toggled) return base;
-	return base + ' -translate-y-full ' + interactiveLook.toggled;
+	if (!toggled) return base;
+	return base + ' translate-y-0 ' + interactiveLook.toggled;
 };
 
 const firstULClasser = () => {
