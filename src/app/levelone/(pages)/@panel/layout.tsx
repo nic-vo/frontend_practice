@@ -9,7 +9,8 @@ const LevelOnePanelLayout = (props: PropsWithChildren) => {
 		<TogglePanel>
 			{/*
 
-			In the @panel
+			In the @panel dir for the appropriate clone,
+			Manually construct info page using the intended global components
 
 		*/}
 			{props.children}
@@ -17,4 +18,4 @@ const LevelOnePanelLayout = (props: PropsWithChildren) => {
 	);
 };
 
-export default TogglePanel;
+export default LevelOnePanelLayout;
