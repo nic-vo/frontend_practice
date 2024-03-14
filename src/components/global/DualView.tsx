@@ -4,7 +4,6 @@ import { useState, PropsWithChildren, useEffect, useRef } from 'react';
 
 const ToggleAside = (props: PropsWithChildren) => {
 	const [toggled, setToggled] = useState(true);
-
 	const asideRef = useRef<HTMLElement>(null);
 
 	useEffect(() => {
