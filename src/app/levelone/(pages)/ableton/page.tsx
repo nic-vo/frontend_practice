@@ -241,5 +241,5 @@ const AbletonAboutPage = () => {
 export default AbletonAboutPage;
 
 export const metadata = {
-	title: 'Nic Vo | Ableton Clone',
+	title: 'Ableton Clone',
 };
