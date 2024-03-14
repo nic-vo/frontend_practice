@@ -35,9 +35,14 @@ const AbletonCookies = () => {
 					Click “Close” to deny consent. However, the use of technically
 					required cookies is essential for the website to function.
 				</p>
+				<a
+					href='https://www.ableton.com/en/cookie-settings/?next=https://www.ableton.com/en/about/'
+					className='text-center border-2 p-2 col-span-2'>
+					More info
+				</a>
 				<button
 					type='submit'
-					className='col-span-2 bg-blue-700 p-2'>
+					className='bg-blue-700 p-2'>
 					Accept
 				</button>
 				<button
@@ -47,11 +52,6 @@ const AbletonCookies = () => {
 					className='border-2 p-2'>
 					Close
 				</button>
-				<a
-					href='https://www.ableton.com/en/cookie-settings/?next=https://www.ableton.com/en/about/'
-					className='text-center border-2 p-2'>
-					More info
-				</a>
 			</form>
 		</dialog>
 	);
