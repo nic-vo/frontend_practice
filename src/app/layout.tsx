@@ -11,3 +11,9 @@ const HomepageRootLayout = (props: PropsWithChildren) => {
 };
 
 export default HomepageRootLayout;
+
+export const metadata = {
+	authors: [{ name: 'Nicolas Vo', url: 'https://nicvo.dev' }],
+	creator: 'Nicolas Vo',
+	publisher: 'Nicolas Vo',
+};
