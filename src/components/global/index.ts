@@ -5,6 +5,7 @@ import DualView, {
 	InfoTitle,
 	PanelContentWrapper,
 	PanelNavWrapper,
+	LayoutDefaultMetadata,
 } from './DualViewServer';
 
 export {
@@ -15,4 +16,5 @@ export {
 	InfoTitle,
 	PanelContentWrapper,
 	PanelNavWrapper,
+	LayoutDefaultMetadata,
 };
