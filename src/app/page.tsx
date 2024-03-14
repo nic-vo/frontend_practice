@@ -5,7 +5,6 @@ const HomePage = async () => {
 	// TODO: Fetch all files in (pages); string[] of links
 
 	const links: string[] = await getPages(['app']);
-	console.log(links);
 	return (
 		<main>
 			<h1 className=''>Welcome to my frontend practice repo</h1>

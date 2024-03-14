@@ -4,7 +4,7 @@ import { getPages } from '@/lib/pages';
 const segment = 'levelthree';
 
 const LevelThreeIndex = async () => {
-	const pages = await getPages(['(pages)', segment]);
+	const pages = await getPages(['app', segment, '(pages)']);
 
 	return (
 		<main>
@@ -25,6 +25,9 @@ const LevelThreeIndex = async () => {
 								<Link href={`/${segment}/${link}`}>{link}</Link>
 							</li>
 						))}
+						<li>
+							<Link href='/'>Home</Link>
+						</li>
 					</ul>
 				</nav>
 			)}

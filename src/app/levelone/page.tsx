@@ -21,10 +21,13 @@ const LevelOneIndex = async () => {
 				<nav>
 					<ul>
 						{pages.map((link) => (
-							<li key='link'>
+							<li key={link}>
 								<Link href={`/${segment}/${link}`}>{link}</Link>
 							</li>
 						))}
+						<li>
+							<Link href='/'>Home</Link>
+						</li>
 					</ul>
 				</nav>
 			)}
