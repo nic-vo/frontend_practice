@@ -4,7 +4,7 @@ import { getPages } from '@/lib/pages';
 const segment = 'levelone';
 
 const LevelOneIndex = async () => {
-	const pages = await getPages(['(pages)', segment]);
+	const pages = await getPages(['app', segment, '(pages)']);
 
 	return (
 		<main>

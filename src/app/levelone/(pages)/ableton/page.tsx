@@ -3,7 +3,8 @@ import {
 	Section,
 	Hero,
 	Footer,
-} from '@/app/(pages)/levelone/ableton/_components';
+	AbletonCookies,
+} from '@/app/levelone/(pages)/ableton/_components_';
 import Image from 'next/image';
 import {
 	office001,
@@ -15,14 +16,14 @@ import {
 	software001,
 	studio002,
 	turntables,
-} from '@/app/(pages)/levelone/ableton/_components/images';
+} from '@/app/levelone/(pages)/ableton/_components_/images';
 
-import { outfit } from '@/app/(pages)/levelone/ableton/_components/styles';
-import Cookies from '@/app/(pages)/levelone/ableton/_components/Cookies';
+import { outfit } from '@/app/levelone/(pages)/ableton/_components_/styles';
 
 const AbletonAboutPage = () => {
 	return (
 		<div className='bg-zinc-100 flex flex-col items-center overflow-hidden'>
+			<AbletonCookies />
 			<Header />
 			<main
 				className={
@@ -232,7 +233,6 @@ const AbletonAboutPage = () => {
 					</section>
 				</div>
 			</main>
-			<Cookies />
 			<Footer />
 		</div>
 	);
