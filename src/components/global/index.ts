@@ -1,4 +1,18 @@
-import DualView from './DualView';
-import { LayoutNav, OriginalNav, InfoTitle } from './DualViewServer';
+import TogglePanel from './DualView';
+import DualView, {
+	LayoutNav,
+	OriginalNav,
+	InfoTitle,
+	PanelContentWrapper,
+	PanelNavWrapper,
+} from './DualViewServer';
 
-export { DualView, LayoutNav, OriginalNav, InfoTitle };
+export {
+	TogglePanel,
+	DualView,
+	LayoutNav,
+	OriginalNav,
+	InfoTitle,
+	PanelContentWrapper,
+	PanelNavWrapper,
+};
