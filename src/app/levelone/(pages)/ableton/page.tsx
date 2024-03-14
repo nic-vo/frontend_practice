@@ -1,7 +1,7 @@
 import {
 	Header,
-	Section,
-	Hero,
+	AbletonSection,
+	AbletonHero,
 	Footer,
 	AbletonCookies,
 } from '@/app/levelone/(pages)/ableton/_components_';
@@ -30,8 +30,8 @@ const AbletonAboutPage = () => {
 					outfit.className +
 					' max-w-screen-xl min-h-screen flex flex-col items-center gap-y-16 pb-12 lg:pb-32 border-b-2 overflow-hidden w-full lg:max-w-screen-2xl bg-white'
 				}>
-				<Hero />
-				<Section>
+				<AbletonHero />
+				<AbletonSection>
 					<h2 className='text-xl lg:text-3xl font-medium'>
 						We make{' '}
 						<a
@@ -65,7 +65,7 @@ const AbletonAboutPage = () => {
 						2001. Our products are used by a community of dedicated musicians,
 						sound designers, and artists from across the world.
 					</p>
-				</Section>
+				</AbletonSection>
 				<div className='flex after:h-full after:absolute after:bg-yellow-200 after:w-2/3 after:right-0 after-content:[""]'>
 					<div className='flex items-center w-3/5 p-4 lg:p-16 z-10'>
 						<Image
@@ -84,7 +84,7 @@ const AbletonAboutPage = () => {
 						/>
 					</div>
 				</div>
-				<Section>
+				<AbletonSection>
 					<h2 className='text-xl lg:text-3xl font-medium'>
 						Making music isn&apos;t easy. It takes time, effort, and learning.
 						But when you&apos;re in the flow, it&apos;s incredibly rewarding.
@@ -94,9 +94,9 @@ const AbletonAboutPage = () => {
 						force behind Ableton is our passion for what we make and the people
 						we make it for.
 					</p>
-				</Section>
+				</AbletonSection>
 				{/* TODO: Optional -- embed YouTube interview with caption? */}
-				<Section>
+				<AbletonSection>
 					<h2 className='text-xl lg:text-3xl font-medium'>
 						We are more than 350 people from 30 different countries divided
 						between our headquarters in Berlin and our offices in Los Angeles
@@ -111,7 +111,7 @@ const AbletonAboutPage = () => {
 						to contribute to something big: helping to shape the furture of
 						music culture.
 					</p>
-				</Section>
+				</AbletonSection>
 				<div className='flex items-center after:absolute after:content-[""] after:h-full after:w-3/5 after:bg-green-200'>
 					<div className='flex flex-col p-4 lg:p-16 gap-4 z-10 w-2/5'>
 						<Image
@@ -136,7 +136,7 @@ const AbletonAboutPage = () => {
 						/>
 					</div>
 				</div>
-				<Section>
+				<AbletonSection>
 					<h2 className='text-xl lg:text-3xl font-medium'>
 						We believe it takes focus to create truly outstanding instruments.
 						We only work on a few products and we strive to make them great.
@@ -149,7 +149,7 @@ const AbletonAboutPage = () => {
 						wider set of perspectives. We don&apos;t always agree with each
 						other, but opinion and debate are valued and openly encouraged.
 					</p>
-				</Section>
+				</AbletonSection>
 				<div className='p-4 lg:p-16 w-10/12 max-w-screen-xl'>
 					<Image
 						placeholder='blur'
@@ -158,7 +158,7 @@ const AbletonAboutPage = () => {
 						sizes='100vw'
 					/>
 				</div>
-				<Section>
+				<AbletonSection>
 					<h2 className='text-xl lg:text-3xl font-medium'>
 						We&apos;re passionate about what we do, but we&apos;re equally
 						passionate about improving who we are.
@@ -174,7 +174,7 @@ const AbletonAboutPage = () => {
 						applying these in their daily work. In addition, staff-organized
 						development and music salons are a chance to{' '}
 					</p>
-				</Section>
+				</AbletonSection>
 				<div className='flex items-center justify-end after:h-full after:absolute after:bg-purple-300 after:w-9/12 after-content:[""] after:right-[16%] gap-4'>
 					<div className='flex items-end w-2/6 py-4 lg:py-16 z-10'>
 						<Image
@@ -193,7 +193,7 @@ const AbletonAboutPage = () => {
 						/>
 					</div>
 				</div>
-				<Section>
+				<AbletonSection>
 					<h2 className='text-xl lg:text-3xl font-medium'>
 						We want our employees to love it here. Since we&apos;re looking for
 						exceptional talent from around the world, we will do everything we
@@ -209,7 +209,7 @@ const AbletonAboutPage = () => {
 						thorughout the year as well as a variety of fun, informal
 						small-group activities.
 					</p>
-				</Section>
+				</AbletonSection>
 				<div className='flex flex-col lg:flex-row w-10/12 max-w-screen-xl'>
 					<div className='lg:w-1/2'>
 						<Image

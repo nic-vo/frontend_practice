@@ -9,7 +9,7 @@ import {
 import interactiveLook from './interactive.module.scss';
 import globalLook from '@/styles/globals.module.scss';
 
-const Footer = () => {
+const AbletonFooter = () => {
 	return (
 		<footer className='bg-white flex flex-col items-center w-full max-w-screen-2xl py-12 lg:py-24 text-sm lg:text-lg'>
 			<div className='flex-grow w-10/12 flex lg:grid flex-col gap-12 lg:gap-16 grid-cols-5 grid-rows-min'>
@@ -268,11 +268,13 @@ const Footer = () => {
 						<FaAlignJustify />
 						<FaAlignJustify />
 					</a>
-					<span className='block h-full lg:font-medium lg:text-sm'>Made in Berlin</span>
+					<span className='block h-full lg:font-medium lg:text-sm'>
+						Made in Berlin
+					</span>
 				</div>
 			</div>
 		</footer>
 	);
 };
 
-export default Footer;
+export default AbletonFooter;

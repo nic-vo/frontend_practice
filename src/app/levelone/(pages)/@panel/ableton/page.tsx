@@ -6,7 +6,7 @@ import {
 	PanelNavWrapper,
 } from '@/components/global';
 
-const AbletonInfo = () => {
+const AbletonPanel = () => {
 	return (
 		<>
 			<InfoTitle title='Ableton About Page Clone' />
@@ -39,4 +39,4 @@ const AbletonInfo = () => {
 	);
 };
 
-export default AbletonInfo;
+export default AbletonPanel;

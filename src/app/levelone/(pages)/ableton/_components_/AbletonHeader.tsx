@@ -50,7 +50,7 @@ const firstULClasser = () => {
 	].join(' ');
 };
 
-const Header = () => {
+const AbletonHeader = () => {
 	const [toggled, setToggled] = useState(false);
 	const focusRef = useRef<HTMLHeadingElement>(null);
 
@@ -289,4 +289,4 @@ const Header = () => {
 	);
 };
 
-export default Header;
+export default AbletonHeader;

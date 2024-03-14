@@ -1,6 +1,6 @@
-import Header from './Header';
-import Footer from './Footer';
-import { Section, Hero } from './BodyContent';
-import AbletonCookies from './Cookies';
+import Header from './AbletonHeader';
+import Footer from './AbletonFooter';
+import { AbletonSection, AbletonHero } from './AbletonBodyContent';
+import AbletonCookies from './AbletonCookies';
 
-export { Header, Footer, Section, Hero, AbletonCookies };
+export { Header, Footer, AbletonSection, AbletonHero, AbletonCookies };
