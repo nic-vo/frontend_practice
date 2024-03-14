@@ -1,12 +1,6 @@
 'use client';
 
 import { useState, PropsWithChildren, useEffect, useRef } from 'react';
-import {
-	CloneMissing,
-	InfoMissing,
-	InfoNavMissing,
-	InfoTitleMissing,
-} from './DualViewServer';
 
 const ToggleAside = (props: PropsWithChildren) => {
 	const [toggled, setToggled] = useState(true);
@@ -27,46 +21,26 @@ const ToggleAside = (props: PropsWithChildren) => {
 	}, [toggled]);
 
 	return (
-		<aside
-			ref={asideRef}
-			className={`fixed bottom-0 lg:bottom-2 lg:right-2 flex flex-col gap-2 bg-black text-white w-full h-full lg:max-w-[33svw] max-h-[50svh] z-10 transition-transform ${toggled ? 'translate-x-full lg:translate-x-[calc(100%_+_0.75rem)]' : ''} rounded-t-3xl lg:rounded-3xl text-lg p-8 gap-8 flex flex-col z-50`}
-			onBlur={() => setToggled(false)}>
+		<>
 			<button
+				id='toggleAside'
 				onClick={() => setToggled(!toggled)}
-				className={`flex gap-2 ${toggled ? 'before:content-["<<"]' : 'after:content-[">>"]'} absolute translate-y-[-110%] lg:translate-y-0 ${!toggled ? 'translate-x-2 lg:translate-x-[-130%]' : 'translate-y-0 translate-x-[-130%]'} bg-rose-500 p-4 transition-transform rounded-lg`}>
+				className={`flex gap-2 ${toggled ? 'before:content-["<<"]' : 'after:content-[">>"]'} fixed bottom-2 right-2 bg-rose-500 p-4 rounded-lg z-[60] text-white shadow-md`}>
 				{!toggled ? 'Close' : 'Open'} info
 			</button>
-			{props.children}
-		</aside>
-	);
-};
-
-const DualView = (props: {
-	clone: React.ReactNode;
-	info: React.ReactNode;
-	infonav: React.ReactNode;
-	infotitle: React.ReactNode;
-}) => {
-	const { clone, info, infonav, infotitle } = props;
-	return (
-		<>
-			{clone || CloneMissing()}
-			<ToggleAside>
-				<section className='overflow-hidden flex flex-col gap-4'>
-					{infotitle || InfoTitleMissing()}
-					<div className='flex flex-col gap-4 overflow-y-auto pr-4 font-light'>
-						{info || InfoMissing()}
-					</div>
-				</section>
-				<nav className='flex gap-2 font-light'>
-					<h2>Links:</h2>
-					<ul className='flex gap-2 underline'>
-						{infonav || InfoNavMissing()}
-					</ul>
-				</nav>
-			</ToggleAside>
+			<aside
+				ref={asideRef}
+				className={`fixed bottom-0 right-0 lg:bottom-2 lg:right-2 flex flex-col gap-2 bg-black text-white h-full w-full max-w-prose lg:max-w-[33svw] max-h-[50svh] lg:max-h-[75svh] z-10 transition-all ${toggled ? 'translate-x-full lg:translate-x-[calc(100%+2rem)] shadow-none' : 'translate-x-0 shadow-2xl'} rounded-t-3xl lg:rounded-3xl text-lg p-8 gap-8 flex flex-col z-50`}>
+				<div className='flex flex-col gap-4 overflow-hidden h-full w-full max-w-prose'>
+					{props.children}
+				</div>
+			</aside>
 		</>
 	);
 };
 
-export default DualView;
+const TogglePanel = (props: PropsWithChildren) => {
+	return <ToggleAside>{props.children}</ToggleAside>;
+};
+
+export default TogglePanel;
