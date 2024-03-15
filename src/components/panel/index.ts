@@ -1,4 +1,4 @@
-import TogglePanel from './panel/DualView';
+import TogglePanel from './DualView';
 import {
 	LayoutNav,
 	OriginalNav,
@@ -6,7 +6,7 @@ import {
 	PanelContentWrapper,
 	PanelNavList,
 	LayoutDefaultMetadata,
-} from './panel/DualViewServer';
+} from './DualViewServer';
 
 export {
 	TogglePanel,
