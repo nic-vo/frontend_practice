@@ -1,9 +1,9 @@
 'use client';
 
-const LevelThreePanelLayoutError = () => {
+const GenericPanelError = () => {
 	return (
 		<p>There was an error rendering the panel component for this clone!</p>
 	);
 };
 
-export default LevelThreePanelLayoutError;
+export default GenericPanelError;

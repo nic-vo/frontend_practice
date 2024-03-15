@@ -1,19 +1,20 @@
 'use client';
 
-import { TogglePanel } from '@/components/global';
-import LevelOneLayoutNav from './_components_';
+import { LayoutNav, TogglePanel } from '@/components/global';
 
-const LevelOnePanelLayoutDefault = () => {
+const LevelOnePanelDefault = () => {
 	return (
 		<TogglePanel>
-			<p>The info panel for this clone is missing!</p>
+			<p>
+				Looks like the info panel for this clone hasn&apos;t been created yet.
+			</p>
 			<nav>
 				<ul>
-					<LevelOneLayoutNav />
+					<LayoutNav upOne='/levelone' />
 				</ul>
 			</nav>
 		</TogglePanel>
 	);
 };
 
-export default LevelOnePanelLayoutDefault;
+export default LevelOnePanelDefault;

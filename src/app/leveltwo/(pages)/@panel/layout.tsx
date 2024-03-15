@@ -4,7 +4,7 @@ import { TogglePanel } from '@/components/global';
 
 import { PropsWithChildren } from 'react';
 
-const LevelTwoPanelLayout = (props: PropsWithChildren) => {
+const PanelLayout = (props: PropsWithChildren) => {
 	return (
 		<TogglePanel>
 			{/*
@@ -18,4 +18,4 @@ const LevelTwoPanelLayout = (props: PropsWithChildren) => {
 	);
 };
 
-export default LevelTwoPanelLayout;
+export default PanelLayout;
