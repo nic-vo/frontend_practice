@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import { LayoutDefaultMetadata } from '@/components/panel';
 
 const DualView = (props: {
 	children: React.ReactNode;
@@ -15,9 +15,4 @@ const DualView = (props: {
 
 export default DualView;
 
-export const metadata: Metadata = {
-	title: {
-		default: 'Nicolas Vo | A page clone',
-		template: 'Nicolas Vo | %s',
-	},
-};
+export const metadata = LayoutDefaultMetadata;

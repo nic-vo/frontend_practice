@@ -1,6 +1,6 @@
 'use client';
 
-import { LayoutNav, TogglePanel } from '@/components/global';
+import { LayoutNav, TogglePanel } from '@/components/panel';
 
 const LevelOnePanelDefault = () => {
 	return (

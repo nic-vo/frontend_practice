@@ -1,4 +1,4 @@
-import { LayoutNav } from '@/components/global';
+import { LayoutNav } from '@/components/panel';
 
 const LevelTwoPanelDefault = () => {
 	return (

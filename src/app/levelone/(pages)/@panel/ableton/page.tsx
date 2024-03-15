@@ -4,7 +4,7 @@ import {
 	OriginalNav,
 	PanelContentWrapper,
 	PanelNavList,
-} from '@/components/global';
+} from '@/components/panel';
 
 const AbletonPanel = () => {
 	return (

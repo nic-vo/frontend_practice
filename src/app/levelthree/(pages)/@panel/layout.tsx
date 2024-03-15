@@ -1,6 +1,6 @@
 'use client';
 
-import { TogglePanel } from '@/components/global';
+import { TogglePanel } from '@/components/panel';
 
 import { PropsWithChildren } from 'react';
 
