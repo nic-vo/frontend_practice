@@ -6,6 +6,7 @@ import {
 	PanelContentWrapper,
 	PanelNavList,
 	LayoutDefaultMetadata,
+	DefaultPanelLoader,
 } from './DualViewServer';
 
 export {
@@ -16,4 +17,5 @@ export {
 	PanelContentWrapper,
 	PanelNavList,
 	LayoutDefaultMetadata,
+	DefaultPanelLoader,
 };

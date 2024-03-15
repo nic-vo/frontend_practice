@@ -57,3 +57,11 @@ export const LayoutDefaultMetadata = {
 		template: 'Nicolas Vo | %s',
 	},
 };
+
+export const DefaultPanelLoader = () => {
+	return (
+		<section className='h-full w-full flex flex-col justify-items-center items-center'>
+			<h2 className='block text-center text-2xl'>Loading info panel...</h2>
+		</section>
+	);
+};
