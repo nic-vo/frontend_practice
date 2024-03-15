@@ -4,6 +4,9 @@
 yarn.lock
 .vscode/*
 
+# yarn workaround for some pnp bugs
+node_modules
+
 # next
 .next/*
 next-env.d.ts
