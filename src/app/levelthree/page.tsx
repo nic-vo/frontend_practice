@@ -21,7 +21,7 @@ const LevelThreeIndex = async () => {
 				<nav>
 					<ul>
 						{pages.map((link) => (
-							<li key='link'>
+							<li key={link}>
 								<Link href={`/${segment}/${link}`}>{link}</Link>
 							</li>
 						))}
