@@ -34,5 +34,5 @@ const HomePage = async () => {
 export default HomePage;
 
 export const metadata = {
-	title: 'Nic Vo | Frontend Practice',
+	title: 'Nicolas Vo | Frontend Practice',
 };

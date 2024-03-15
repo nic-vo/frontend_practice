@@ -38,5 +38,5 @@ const LevelTwoIndex = async () => {
 export default LevelTwoIndex;
 
 export const metadata = {
-	title: 'Nic Vo | Level Two Clones',
+	title: 'Nicolas Vo | Level Two Clones',
 };

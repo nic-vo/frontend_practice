@@ -38,5 +38,5 @@ const LevelThreeIndex = async () => {
 export default LevelThreeIndex;
 
 export const metadata = {
-	title: 'Nic Vo | Level Three Clones',
+	title: 'Nicolas Vo | Level Three Clones',
 };
