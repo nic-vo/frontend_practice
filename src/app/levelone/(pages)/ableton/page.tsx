@@ -4,7 +4,7 @@ import {
 	AbletonHero,
 	Footer,
 	AbletonCookies,
-} from '@/app/levelone/(pages)/ableton/_components_';
+} from './_components_';
 import Image from 'next/image';
 import {
 	office001,
@@ -16,9 +16,9 @@ import {
 	software001,
 	studio002,
 	turntables,
-} from '@/app/levelone/(pages)/ableton/_components_/images';
+} from './_components_/images';
 
-import { outfit } from '@/app/levelone/(pages)/ableton/_components_/styles';
+import { outfit } from './_components_/styles';
 
 const AbletonAboutPage = () => {
 	return (

@@ -1,9 +1,9 @@
-import LevelOneLayoutNav from '../_components_';
 import {
 	InfoTitle,
+	LayoutNav,
 	OriginalNav,
 	PanelContentWrapper,
-	PanelNavWrapper,
+	PanelNavList,
 } from '@/components/global';
 
 const AbletonPanel = () => {
@@ -31,10 +31,10 @@ const AbletonPanel = () => {
 					tree.
 				</p>
 			</PanelContentWrapper>
-			<PanelNavWrapper>
+			<PanelNavList>
 				<OriginalNav original='https://www.ableton.com/en/about' />
-				<LevelOneLayoutNav />
-			</PanelNavWrapper>
+				<LayoutNav upOne='/levelone/' />
+			</PanelNavList>
 		</>
 	);
 };
