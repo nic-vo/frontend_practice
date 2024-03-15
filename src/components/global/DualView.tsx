@@ -18,15 +18,21 @@ const ToggleAside = (props: PropsWithChildren) => {
 		.filter((segment) => segment !== '');
 
 	useEffect(() => {
-		if (!asideRef.current) return;
-		const anchors = asideRef.current.querySelectorAll('a');
+		if (!divRef.current) return;
+		const anchors = divRef.current.querySelectorAll('a');
 		if (!anchors) return;
 		if (toggled) {
 			anchors.forEach((anchor) => (anchor.tabIndex = -1));
+			const heading = divRef.current.querySelector('h2');
+			if (heading) heading.tabIndex = -1;
+			const toggler = document.getElementById(
+				'toggleInfoPanel',
+			) as HTMLButtonElement;
+			if (toggler) toggler.focus();
 		} else {
 			anchors.forEach((anchor) => (anchor.tabIndex = 0));
-			const heading = asideRef.current.querySelector('h2');
-			if (heading) heading.focus();
+			const heading = divRef.current.querySelector('h2');
+			if (heading) heading.tabIndex = 0;
 		}
 	}, [toggled]);
 
