@@ -1,5 +1,17 @@
-import { DualView } from '@/components/global';
 import type { Metadata } from 'next';
+
+const DualView = (props: {
+	children: React.ReactNode;
+	panel: React.ReactNode;
+}) => {
+	const { panel, children } = props;
+	return (
+		<>
+			{children}
+			{panel}
+		</>
+	);
+};
 
 export default DualView;
 
