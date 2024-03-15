@@ -80,6 +80,12 @@ const ToggleAside = (props: PropsWithChildren) => {
 					ref={divRef}>
 					{props.children}
 				</div>
+				<button
+					onClick={() => setToggled(true)}
+					className='absolute top-4 right-4 p-2 border-2 rounded-full hover:text-black hover:bg-white focus:text-black focus:bg-white transition-all'
+					tabIndex={toggled ? -1 : 0}>
+					<FaTimes />
+				</button>
 			</aside>
 		</>
 	);
