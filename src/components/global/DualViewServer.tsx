@@ -4,7 +4,11 @@ import { PropsWithChildren } from 'react';
 export const OriginalNav = (props: { original: string }) => {
 	return (
 		<li>
-			<Link href={props.original}>Original Site</Link>
+			<a
+				target='_blank'
+				href={props.original}>
+				Original Site
+			</a>
 		</li>
 	);
 };
@@ -30,7 +34,7 @@ export const InfoTitle = (props: { title: string }) => {
 	return <h2 className='text-3xl font-bold'>{props.title}</h2>;
 };
 
-export const PanelNavWrapper = (props: PropsWithChildren) => {
+export const PanelNavList = (props: PropsWithChildren) => {
 	return (
 		<nav className='flex flex-col gap-2 border-t-2 pt-2'>
 			<h2 className='text-2xl font-bold'>Links:</h2>
@@ -47,24 +51,9 @@ export const PanelContentWrapper = (props: PropsWithChildren) => {
 	);
 };
 
-const DualView = (props: {
-	children: React.ReactNode;
-	panel: React.ReactNode;
-}) => {
-	const { panel, children } = props;
-	return (
-		<>
-			{children}
-			{panel}
-		</>
-	);
-};
-
 export const LayoutDefaultMetadata = {
 	title: {
 		default: 'Nicolas Vo | A page clone',
 		template: 'Nicolas Vo | %s',
 	},
 };
-
-export default DualView;
