@@ -43,6 +43,8 @@ const AbletonFooter = () => {
 						<ul className='flex flex-col gap-2 lg:gap-0'>
 							<li>
 								<a
+									referrerPolicy='no-referrer'
+									rel='noreferrer'
 									href='https://www.ableton.com/en/account/add_license'
 									className="after:content-['>'] after:ml-1 after:font-thin">
 									Register Live or Push
@@ -50,6 +52,8 @@ const AbletonFooter = () => {
 							</li>
 							<li>
 								<a
+									referrerPolicy='no-referrer'
+									rel='noreferrer'
 									href='https://www.ableton.com/en/about'
 									className="after:content-['>'] after:ml-1 after:font-thin">
 									About Ableton
@@ -57,6 +61,8 @@ const AbletonFooter = () => {
 							</li>
 							<li>
 								<a
+									referrerPolicy='no-referrer'
+									rel='noreferrer'
 									href='https://www.ableton.com/en/jobs'
 									className="after:content-['>'] after:ml-1 after:font-thin">
 									Jobs
@@ -66,6 +72,8 @@ const AbletonFooter = () => {
 						<ul className='flex text-3xl gap-2 text-white'>
 							<li>
 								<a
+									referrerPolicy='no-referrer'
+									rel='noreferrer'
 									href='facebook.com/ableton'
 									target='_blank'
 									className='block p-1.5 bg-blue-600'>
@@ -77,6 +85,8 @@ const AbletonFooter = () => {
 							</li>
 							<li>
 								<a
+									referrerPolicy='no-referrer'
+									rel='noreferrer'
 									href='twitter.com/ableton'
 									target='_blank'
 									className='block p-1.5 bg-sky-500'>
@@ -88,6 +98,8 @@ const AbletonFooter = () => {
 							</li>
 							<li>
 								<a
+									referrerPolicy='no-referrer'
+									rel='noreferrer'
 									href='youtube.com/ableton'
 									target='_blank'
 									className='block p-1.5 bg-red-500'>
@@ -99,6 +111,8 @@ const AbletonFooter = () => {
 							</li>
 							<li>
 								<a
+									referrerPolicy='no-referrer'
+									rel='noreferrer'
 									href='instagram.com/ableton'
 									target='_blank'
 									className='block p-1.5 bg-orange-500'>
@@ -115,6 +129,8 @@ const AbletonFooter = () => {
 						<ul className='flex flex-col gap-2 lg:gap-0'>
 							<li>
 								<a
+									referrerPolicy='no-referrer'
+									rel='noreferrer'
 									href='https://www.ableton.com/en/shop/education'
 									className="after:content-['>'] after:ml-1 after:font-thin">
 									Offers for students and teachers
@@ -122,6 +138,8 @@ const AbletonFooter = () => {
 							</li>
 							<li>
 								<a
+									referrerPolicy='no-referrer'
+									rel='noreferrer'
 									href='https://www.ableton.com/en/classroom'
 									className="after:content-['>'] after:ml-1 after:font-thin">
 									Ableton for the Classroom
@@ -129,6 +147,8 @@ const AbletonFooter = () => {
 							</li>
 							<li>
 								<a
+									referrerPolicy='no-referrer'
+									rel='noreferrer'
 									href='https://www.ableton.com/en/colleges-universities'
 									className="after:content-['>'] after:ml-1 after:font-thin">
 									Ableton for Colleges and Universities
@@ -141,6 +161,8 @@ const AbletonFooter = () => {
 						<ul className='flex flex-col gap-2 lg:gap-0'>
 							<li>
 								<a
+									referrerPolicy='no-referrer'
+									rel='noreferrer'
 									href='https://www.ableton.com/en/community/user-groups'
 									className="after:content-['>'] after:ml-1 after:font-thin">
 									Find Ableton User Groups
@@ -148,6 +170,8 @@ const AbletonFooter = () => {
 							</li>
 							<li>
 								<a
+									referrerPolicy='no-referrer'
+									rel='noreferrer'
 									href='https://www.ableton.com/en/certified-training'
 									className="after:content-['>'] after:ml-1 after:font-thin">
 									Find Certified Training
@@ -155,6 +179,8 @@ const AbletonFooter = () => {
 							</li>
 							<li>
 								<a
+									referrerPolicy='no-referrer'
+									rel='noreferrer'
 									href='https://www.ableton.com/en/education/certification-program'
 									className="after:content-['>'] after:ml-1 after:font-thin">
 									Become a Certified Trainer
@@ -237,31 +263,59 @@ const AbletonFooter = () => {
 					</section>
 					<ul className='flex flex-col gap-2 lg:text-sm font-medium lg:flex-row col-span-2'>
 						<li>
-							<a href='https://www.ableton.com/en/contact-us'>Contact Us</a>
+							<a
+								referrerPolicy='no-referrer'
+								rel='noreferrer'
+								href='https://www.ableton.com/en/contact-us'>
+								Contact Us
+							</a>
 						</li>
 						<li>
-							<a href='https://www.ableton.com/en/press'>Press Resources</a>
+							<a
+								referrerPolicy='no-referrer'
+								rel='noreferrer'
+								href='https://www.ableton.com/en/press'>
+								Press Resources
+							</a>
 						</li>
 						<li>
-							<a href='https://www.ableton.com/en/legal'>Legal Info</a>
+							<a
+								referrerPolicy='no-referrer'
+								rel='noreferrer'
+								href='https://www.ableton.com/en/legal'>
+								Legal Info
+							</a>
 						</li>
 						<li>
-							<a href='https://www.ableton.com/en/privacy-policy'>
+							<a
+								referrerPolicy='no-referrer'
+								rel='noreferrer'
+								href='https://www.ableton.com/en/privacy-policy'>
 								Privacy Policy
 							</a>
 						</li>
 						<li>
-							<a href='https://www.ableton.com/en/cookie-settings'>
+							<a
+								referrerPolicy='no-referrer'
+								rel='noreferrer'
+								href='https://www.ableton.com/en/cookie-settings'>
 								Cookie Settings
 							</a>
 						</li>
 						<li>
-							<a href='https://www.ableton.com/en/imprint'>Imprint</a>
+							<a
+								referrerPolicy='no-referrer'
+								rel='noreferrer'
+								href='https://www.ableton.com/en/imprint'>
+								Imprint
+							</a>
 						</li>
 					</ul>
 				</nav>
 				<div className='flex items-center gap-4 lg:absolute lg:bottom-0 lg:right-0 lg:flex-row-reverse'>
 					<a
+						referrerPolicy='no-referrer'
+						rel='noreferrer'
 						href='https://www.ableton.com/en/'
 						target='_blank'
 						className={`flex z-40 text-3xl lg:text-2xl ${interactiveLook.logo}`}>

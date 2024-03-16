@@ -35,24 +35,32 @@ const AbletonAboutPage = () => {
 					<h2 className='text-xl lg:text-3xl font-medium'>
 						We make{' '}
 						<a
+							referrerPolicy='no-referrer'
+							rel='noreferrer'
 							href='https://www.ableton.com/en/live'
 							className='text-blue-600'>
 							Live
 						</a>
 						,{' '}
 						<a
+							referrerPolicy='no-referrer'
+							rel='noreferrer'
 							href='https://www.ableton.com/en/push'
 							className='text-blue-600'>
 							Push
 						</a>
 						,{' '}
 						<a
+							referrerPolicy='no-referrer'
+							rel='noreferrer'
 							href='https://www.ableton.com/en/note'
 							className='text-blue-600'>
 							Note
 						</a>{' '}
 						and{' '}
 						<a
+							referrerPolicy='no-referrer'
+							rel='noreferrer'
 							href='https://www.ableton.com/en/link'
 							className='text-blue-600'>
 							Link
@@ -226,6 +234,8 @@ const AbletonAboutPage = () => {
 							of it, please join us.
 						</h2>
 						<a
+							referrerPolicy='no-referrer'
+							rel='noreferrer'
 							href='https://www.ableton.com/en/jobs'
 							className="text-blue-700 after:content-['>']">
 							See latest jobs

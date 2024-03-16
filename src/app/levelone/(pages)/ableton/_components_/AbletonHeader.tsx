@@ -63,6 +63,8 @@ const AbletonHeader = () => {
 			className={`flex flex-col w-full lg:max-w-screen-2xl bg-white ${outfit.className}`}>
 			<nav className='w-full h-16 lg:h-auto border-b-2'>
 				<a
+					rel='noreferrer'
+					referrerPolicy='no-referrer'
 					href='https://www.ableton.com/en/'
 					target='_blank'
 					className={`absolute flex z-40 ml-4 lg:ml-8 mt-4 text-3xl ${interactiveLook.logo}`}>
@@ -79,6 +81,8 @@ const AbletonHeader = () => {
 					<ul className={firstULClasser()}>
 						<li>
 							<a
+								rel='noreferrer'
+								referrerPolicy='no-referrer'
 								href='https://www.ableton.com/en/live'
 								target='_blank'>
 								Live
@@ -86,6 +90,8 @@ const AbletonHeader = () => {
 						</li>
 						<li>
 							<a
+								rel='noreferrer'
+								referrerPolicy='no-referrer'
 								href='https://www.ableton.com/en/push'
 								target='_blank'>
 								Push
@@ -93,6 +99,8 @@ const AbletonHeader = () => {
 						</li>
 						<li>
 							<a
+								rel='noreferrer'
+								referrerPolicy='no-referrer'
 								href='https://www.ableton.com/en/note'
 								target='_blank'>
 								Note
@@ -100,6 +108,8 @@ const AbletonHeader = () => {
 						</li>
 						<li>
 							<a
+								rel='noreferrer'
+								referrerPolicy='no-referrer'
 								href='https://www.ableton.com/en/link'
 								target='_blank'>
 								Link
@@ -107,6 +117,8 @@ const AbletonHeader = () => {
 						</li>
 						<li>
 							<a
+								rel='noreferrer'
+								referrerPolicy='no-referrer'
 								href='https://www.ableton.com/en/shop'
 								target='_blank'>
 								Shop
@@ -114,6 +126,8 @@ const AbletonHeader = () => {
 						</li>
 						<li>
 							<a
+								rel='noreferrer'
+								referrerPolicy='no-referrer'
 								href='https://www.ableton.com/en/packs'
 								target='_blank'>
 								Packs
@@ -121,6 +135,8 @@ const AbletonHeader = () => {
 						</li>
 						<li>
 							<a
+								rel='noreferrer'
+								referrerPolicy='no-referrer'
 								href='https://www.ableton.com/en/help'
 								target='_blank'>
 								Help
@@ -135,6 +151,8 @@ const AbletonHeader = () => {
 						</li>
 						<li>
 							<a
+								rel='noreferrer'
+								referrerPolicy='no-referrer'
 								href='https://www.ableton.com/en/trial'
 								target='_blank'
 								className='text-inherit lg:text-blue-700'>
@@ -143,6 +161,8 @@ const AbletonHeader = () => {
 						</li>
 						<li>
 							<a
+								rel='noreferrer'
+								referrerPolicy='no-referrer'
 								href='https://www.ableton.com/en/login/?next=/en/about/'
 								target='_blank'>
 								Log in or register
@@ -159,6 +179,8 @@ const AbletonHeader = () => {
 						<ul className='flex flex-col lg:flex-row gap-4 lg:gap-8 text-sm lg:text-base'>
 							<li>
 								<a
+									rel='noreferrer'
+									referrerPolicy='no-referrer'
 									href='https://www.ableton.com/en/blog'
 									target='_blank'>
 									Blog
@@ -166,6 +188,8 @@ const AbletonHeader = () => {
 							</li>
 							<li>
 								<a
+									rel='noreferrer'
+									referrerPolicy='no-referrer'
 									href='https://www.ableton.com/en/classroom'
 									target='_blank'>
 									Ableton for the Classroom
@@ -173,6 +197,8 @@ const AbletonHeader = () => {
 							</li>
 							<li>
 								<a
+									rel='noreferrer'
+									referrerPolicy='no-referrer'
 									href='https://www.ableton.com/en/colleges-universities'
 									target='_blank'>
 									Ableton for Colleges and Universities
@@ -180,6 +206,8 @@ const AbletonHeader = () => {
 							</li>
 							<li>
 								<a
+									rel='noreferrer'
+									referrerPolicy='no-referrer'
 									href='https://www.ableton.com/en/certified-training'
 									target='_blank'>
 									Certified Training
@@ -187,6 +215,8 @@ const AbletonHeader = () => {
 							</li>
 							<li>
 								<a
+									rel='noreferrer'
+									referrerPolicy='no-referrer'
 									href='https://www.ableton.com/en/about'
 									target='_blank'
 									className='lg:text-red-400'>
@@ -195,6 +225,8 @@ const AbletonHeader = () => {
 							</li>
 							<li>
 								<a
+									rel='noreferrer'
+									referrerPolicy='no-referrer'
 									href='https://www.ableton.com/en/jobs'
 									target='_blank'>
 									Jobs
@@ -202,6 +234,8 @@ const AbletonHeader = () => {
 							</li>
 							<li>
 								<a
+									rel='noreferrer'
+									referrerPolicy='no-referrer'
 									href='https://www.ableton.com/en/ausbildung'
 									target='_blank'>
 									Apprenticeships
@@ -214,6 +248,8 @@ const AbletonHeader = () => {
 						<ul className='flex flex-row gap-4 pb-4 text-sm lg:text-base lg:pb-0 lg:gap-8 overflow-x-auto'>
 							<li className='w-1/4 min-w-64 lg:min-w-1/4 shrink-0 lg:shrink'>
 								<a
+									rel='noreferrer'
+									referrerPolicy='no-referrer'
 									href='https://www.ableton.com/en/blog/categores/loop'
 									target='_blank'>
 									<h3 className='font-semibold'>Loop</h3>
@@ -225,6 +261,8 @@ const AbletonHeader = () => {
 							</li>
 							<li className='w-1/4 min-w-64 lg:min-w-1/4 shrink-0 lg:shrink'>
 								<a
+									rel='noreferrer'
+									referrerPolicy='no-referrer'
 									href='https://learningmusic.ableton.com/'
 									target='_blank'>
 									<h3 className='font-semibold'>Learning Music</h3>
@@ -236,6 +274,8 @@ const AbletonHeader = () => {
 							</li>
 							<li className='w-1/4 min-w-64 lg:min-w-1/4 shrink-0 lg:shrink'>
 								<a
+									rel='noreferrer'
+									referrerPolicy='no-referrer'
 									href='https://learningsynths.ableton.com/'
 									target='_blank'>
 									<h3 className='font-semibold'>Learning Synths</h3>
@@ -247,6 +287,8 @@ const AbletonHeader = () => {
 							</li>
 							<li className='w-1/4 min-w-64 lg:min-w-1/4 shrink-0 lg:shrink'>
 								<a
+									rel='noreferrer'
+									referrerPolicy='no-referrer'
 									href='https://makingmusic.ableton.com/'
 									target='_blank'>
 									<h3 className='font-semibold'>Making Music</h3>
@@ -264,6 +306,8 @@ const AbletonHeader = () => {
 				<ul className='flex p-6 gap-8'>
 					<li>
 						<a
+							rel='noreferrer'
+							referrerPolicy='no-referrer'
 							href='https://www.ableton.com/en/about'
 							className='text-red-400'>
 							About
@@ -271,6 +315,8 @@ const AbletonHeader = () => {
 					</li>
 					<li>
 						<a
+							rel='noreferrer'
+							referrerPolicy='no-referrer'
 							href='https://www.ableton.com/en/jobs'
 							target='_blank'>
 							Jobs
@@ -278,6 +324,8 @@ const AbletonHeader = () => {
 					</li>
 					<li>
 						<a
+							rel='noreferrer'
+							referrerPolicy='no-referrer'
 							href='https://www.ableton.com/en/ausbildung'
 							target='_blank'>
 							Apprenticeships
