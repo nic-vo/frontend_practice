@@ -1,5 +1,6 @@
 'use client';
 
+import { SafeExternalLink } from '@/components/global/Commons';
 import { useEffect, useRef } from 'react';
 
 const AbletonCookies = () => {
@@ -35,13 +36,11 @@ const AbletonCookies = () => {
 					Click “Close” to deny consent. However, the use of technically
 					required cookies is essential for the website to function.
 				</p>
-				<a
-					referrerPolicy='no-referrer'
-					rel='noreferrer'
+				<SafeExternalLink
 					href='https://www.ableton.com/en/cookie-settings/?next=https://www.ableton.com/en/about/'
 					className='text-center border-2 p-2 col-span-2'>
 					More info
-				</a>
+				</SafeExternalLink>
 				<button
 					type='submit'
 					className='bg-blue-700 p-2'>

@@ -13,6 +13,7 @@ import {
 import { outfit } from './styles';
 import interactiveLook from './interactive.module.scss';
 import globalLook from '@/styles/globals.module.scss';
+import { SafeExternalLink } from '@/components/global/Commons';
 
 const weirdDivClasser = (toggled: boolean) => {
 	const navContainerClassObject = {
@@ -80,67 +81,39 @@ const AbletonHeader = () => {
 				<div className={weirdDivClasser(toggled)}>
 					<ul className={firstULClasser()}>
 						<li>
-							<a
-								rel='noreferrer'
-								referrerPolicy='no-referrer'
-								href='https://www.ableton.com/en/live'
-								target='_blank'>
+							<SafeExternalLink href='https://www.ableton.com/en/live'>
 								Live
-							</a>
+							</SafeExternalLink>
 						</li>
 						<li>
-							<a
-								rel='noreferrer'
-								referrerPolicy='no-referrer'
-								href='https://www.ableton.com/en/push'
-								target='_blank'>
+							<SafeExternalLink href='https://www.ableton.com/en/push'>
 								Push
-							</a>
+							</SafeExternalLink>
 						</li>
 						<li>
-							<a
-								rel='noreferrer'
-								referrerPolicy='no-referrer'
-								href='https://www.ableton.com/en/note'
-								target='_blank'>
+							<SafeExternalLink href='https://www.ableton.com/en/note'>
 								Note
-							</a>
+							</SafeExternalLink>
 						</li>
 						<li>
-							<a
-								rel='noreferrer'
-								referrerPolicy='no-referrer'
-								href='https://www.ableton.com/en/link'
-								target='_blank'>
+							<SafeExternalLink href='https://www.ableton.com/en/link'>
 								Link
-							</a>
+							</SafeExternalLink>
 						</li>
 						<li>
-							<a
-								rel='noreferrer'
-								referrerPolicy='no-referrer'
-								href='https://www.ableton.com/en/shop'
-								target='_blank'>
+							<SafeExternalLink href='https://www.ableton.com/en/shop'>
 								Shop
-							</a>
+							</SafeExternalLink>
 						</li>
 						<li>
-							<a
-								rel='noreferrer'
-								referrerPolicy='no-referrer'
-								href='https://www.ableton.com/en/packs'
-								target='_blank'>
+							<SafeExternalLink href='https://www.ableton.com/en/packs'>
 								Packs
-							</a>
+							</SafeExternalLink>
 						</li>
 						<li>
-							<a
-								rel='noreferrer'
-								referrerPolicy='no-referrer'
-								href='https://www.ableton.com/en/help'
-								target='_blank'>
+							<SafeExternalLink href='https://www.ableton.com/en/help'>
 								Help
-							</a>
+							</SafeExternalLink>
 						</li>
 						<li className='hidden lg:list-item'>
 							<button
@@ -150,23 +123,16 @@ const AbletonHeader = () => {
 							</button>
 						</li>
 						<li>
-							<a
-								rel='noreferrer'
-								referrerPolicy='no-referrer'
+							<SafeExternalLink
 								href='https://www.ableton.com/en/trial'
-								target='_blank'
 								className='text-inherit lg:text-blue-700'>
 								Try Live 12 for free
-							</a>
+							</SafeExternalLink>
 						</li>
 						<li>
-							<a
-								rel='noreferrer'
-								referrerPolicy='no-referrer'
-								href='https://www.ableton.com/en/login/?next=/en/about/'
-								target='_blank'>
+							<SafeExternalLink href='https://www.ableton.com/en/login/?next=/en/about/'>
 								Log in or register
-							</a>
+							</SafeExternalLink>
 						</li>
 					</ul>
 					<section className={`flex-col gap-4 ${interactiveLook.selDis}`}>
@@ -178,68 +144,41 @@ const AbletonHeader = () => {
 						</h2>
 						<ul className='flex flex-col lg:flex-row gap-4 lg:gap-8 text-sm lg:text-base'>
 							<li>
-								<a
-									rel='noreferrer'
-									referrerPolicy='no-referrer'
-									href='https://www.ableton.com/en/blog'
-									target='_blank'>
+								<SafeExternalLink href='https://www.ableton.com/en/blog'>
 									Blog
-								</a>
+								</SafeExternalLink>
 							</li>
 							<li>
-								<a
-									rel='noreferrer'
-									referrerPolicy='no-referrer'
-									href='https://www.ableton.com/en/classroom'
-									target='_blank'>
+								<SafeExternalLink href='https://www.ableton.com/en/classroom'>
 									Ableton for the Classroom
-								</a>
+								</SafeExternalLink>
 							</li>
 							<li>
-								<a
-									rel='noreferrer'
-									referrerPolicy='no-referrer'
-									href='https://www.ableton.com/en/colleges-universities'
-									target='_blank'>
+								<SafeExternalLink href='https://www.ableton.com/en/colleges-universities'>
 									Ableton for Colleges and Universities
-								</a>
+								</SafeExternalLink>
 							</li>
 							<li>
-								<a
-									rel='noreferrer'
-									referrerPolicy='no-referrer'
-									href='https://www.ableton.com/en/certified-training'
-									target='_blank'>
+								<SafeExternalLink href='https://www.ableton.com/en/certified-training'>
 									Certified Training
-								</a>
+								</SafeExternalLink>
 							</li>
 							<li>
-								<a
-									rel='noreferrer'
-									referrerPolicy='no-referrer'
+								<SafeExternalLink
 									href='https://www.ableton.com/en/about'
-									target='_blank'
 									className='lg:text-red-400'>
 									About Ableton
-								</a>
+								</SafeExternalLink>
 							</li>
 							<li>
-								<a
-									rel='noreferrer'
-									referrerPolicy='no-referrer'
-									href='https://www.ableton.com/en/jobs'
-									target='_blank'>
+								<SafeExternalLink href='https://www.ableton.com/en/jobs'>
 									Jobs
-								</a>
+								</SafeExternalLink>
 							</li>
 							<li>
-								<a
-									rel='noreferrer'
-									referrerPolicy='no-referrer'
-									href='https://www.ableton.com/en/ausbildung'
-									target='_blank'>
+								<SafeExternalLink href='https://www.ableton.com/en/ausbildung'>
 									Apprenticeships
-								</a>
+								</SafeExternalLink>
 							</li>
 						</ul>
 					</section>
@@ -247,56 +186,40 @@ const AbletonHeader = () => {
 						<h2 className='text-2xl'>More from Ableton:</h2>
 						<ul className='flex flex-row gap-4 pb-4 text-sm lg:text-base lg:pb-0 lg:gap-8 overflow-x-auto'>
 							<li className='w-1/4 min-w-64 lg:min-w-1/4 shrink-0 lg:shrink'>
-								<a
-									rel='noreferrer'
-									referrerPolicy='no-referrer'
-									href='https://www.ableton.com/en/blog/categores/loop'
-									target='_blank'>
+								<SafeExternalLink href='https://www.ableton.com/en/blog/categores/loop'>
 									<h3 className='font-semibold'>Loop</h3>
 									<span>
 										Watch Talks, Performances and Features from Ableton&apos;s
 										Summit for Music Makers
 									</span>
-								</a>
+								</SafeExternalLink>
 							</li>
 							<li className='w-1/4 min-w-64 lg:min-w-1/4 shrink-0 lg:shrink'>
-								<a
-									rel='noreferrer'
-									referrerPolicy='no-referrer'
-									href='https://learningmusic.ableton.com/'
-									target='_blank'>
+								<SafeExternalLink href='https://learningmusic.ableton.com/'>
 									<h3 className='font-semibold'>Learning Music</h3>
 									<span>
 										Learn the fundamentals of music making right in your
 										browser.
 									</span>
-								</a>
+								</SafeExternalLink>
 							</li>
 							<li className='w-1/4 min-w-64 lg:min-w-1/4 shrink-0 lg:shrink'>
-								<a
-									rel='noreferrer'
-									referrerPolicy='no-referrer'
-									href='https://learningsynths.ableton.com/'
-									target='_blank'>
+								<SafeExternalLink href='https://learningsynths.ableton.com/'>
 									<h3 className='font-semibold'>Learning Synths</h3>
 									<span>
 										Get started with synthesis using a web-based synth and
 										accompanying lessons.
 									</span>
-								</a>
+								</SafeExternalLink>
 							</li>
 							<li className='w-1/4 min-w-64 lg:min-w-1/4 shrink-0 lg:shrink'>
-								<a
-									rel='noreferrer'
-									referrerPolicy='no-referrer'
-									href='https://makingmusic.ableton.com/'
-									target='_blank'>
+								<SafeExternalLink href='https://makingmusic.ableton.com/'>
 									<h3 className='font-semibold'>Making Music</h3>
 									<span>
 										Some tips from 74 Creative Strategies for Electronic
 										Producers.
 									</span>
-								</a>
+								</SafeExternalLink>
 							</li>
 						</ul>
 					</section>
@@ -305,31 +228,21 @@ const AbletonHeader = () => {
 			<nav className='sticky'>
 				<ul className='flex p-6 gap-8'>
 					<li>
-						<a
-							rel='noreferrer'
-							referrerPolicy='no-referrer'
+						<SafeExternalLink
 							href='https://www.ableton.com/en/about'
 							className='text-red-400'>
 							About
-						</a>
+						</SafeExternalLink>
 					</li>
 					<li>
-						<a
-							rel='noreferrer'
-							referrerPolicy='no-referrer'
-							href='https://www.ableton.com/en/jobs'
-							target='_blank'>
+						<SafeExternalLink href='https://www.ableton.com/en/jobs'>
 							Jobs
-						</a>
+						</SafeExternalLink>
 					</li>
 					<li>
-						<a
-							rel='noreferrer'
-							referrerPolicy='no-referrer'
-							href='https://www.ableton.com/en/ausbildung'
-							target='_blank'>
+						<SafeExternalLink href='https://www.ableton.com/en/ausbildung'>
 							Apprenticeships
-						</a>
+						</SafeExternalLink>
 					</li>
 				</ul>
 			</nav>

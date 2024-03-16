@@ -8,6 +8,7 @@ import {
 
 import interactiveLook from './interactive.module.scss';
 import globalLook from '@/styles/globals.module.scss';
+import { SafeExternalLink } from '@/components/global/Commons';
 
 const AbletonFooter = () => {
 	return (
@@ -42,85 +43,67 @@ const AbletonFooter = () => {
 					<div className='flex flex-col gap-2'>
 						<ul className='flex flex-col gap-2 lg:gap-0'>
 							<li>
-								<a
-									referrerPolicy='no-referrer'
-									rel='noreferrer'
+								<SafeExternalLink
 									href='https://www.ableton.com/en/account/add_license'
 									className="after:content-['>'] after:ml-1 after:font-thin">
 									Register Live or Push
-								</a>
+								</SafeExternalLink>
 							</li>
 							<li>
-								<a
-									referrerPolicy='no-referrer'
-									rel='noreferrer'
+								<SafeExternalLink
 									href='https://www.ableton.com/en/about'
 									className="after:content-['>'] after:ml-1 after:font-thin">
 									About Ableton
-								</a>
+								</SafeExternalLink>
 							</li>
 							<li>
-								<a
-									referrerPolicy='no-referrer'
-									rel='noreferrer'
+								<SafeExternalLink
 									href='https://www.ableton.com/en/jobs'
 									className="after:content-['>'] after:ml-1 after:font-thin">
 									Jobs
-								</a>
+								</SafeExternalLink>
 							</li>
 						</ul>
 						<ul className='flex text-3xl gap-2 text-white'>
 							<li>
-								<a
-									referrerPolicy='no-referrer'
-									rel='noreferrer'
+								<SafeExternalLink
 									href='facebook.com/ableton'
-									target='_blank'
 									className='block p-1.5 bg-blue-600'>
 									<FaFacebook />
 									<span className={globalLook.hiddenAccessibleText}>
 										Facebook
 									</span>
-								</a>
+								</SafeExternalLink>
 							</li>
 							<li>
-								<a
-									referrerPolicy='no-referrer'
-									rel='noreferrer'
+								<SafeExternalLink
 									href='twitter.com/ableton'
-									target='_blank'
 									className='block p-1.5 bg-sky-500'>
 									<FaTwitter />
 									<span className={globalLook.hiddenAccessibleText}>
 										Twitter
 									</span>
-								</a>
+								</SafeExternalLink>
 							</li>
 							<li>
-								<a
-									referrerPolicy='no-referrer'
-									rel='noreferrer'
+								<SafeExternalLink
 									href='youtube.com/ableton'
-									target='_blank'
 									className='block p-1.5 bg-red-500'>
 									<FaYoutube />
 									<span className={globalLook.hiddenAccessibleText}>
 										YouTube
 									</span>
-								</a>
+								</SafeExternalLink>
 							</li>
 							<li>
-								<a
-									referrerPolicy='no-referrer'
-									rel='noreferrer'
+								<SafeExternalLink
 									href='instagram.com/ableton'
-									target='_blank'
 									className='block p-1.5 bg-orange-500'>
 									<FaInstagram />
 									<span className={globalLook.hiddenAccessibleText}>
 										Instagram
 									</span>
-								</a>
+								</SafeExternalLink>
 							</li>
 						</ul>
 					</div>
@@ -128,31 +111,25 @@ const AbletonFooter = () => {
 						<h3 className='font-semibold'>Education</h3>
 						<ul className='flex flex-col gap-2 lg:gap-0'>
 							<li>
-								<a
-									referrerPolicy='no-referrer'
-									rel='noreferrer'
+								<SafeExternalLink
 									href='https://www.ableton.com/en/shop/education'
 									className="after:content-['>'] after:ml-1 after:font-thin">
 									Offers for students and teachers
-								</a>
+								</SafeExternalLink>
 							</li>
 							<li>
-								<a
-									referrerPolicy='no-referrer'
-									rel='noreferrer'
+								<SafeExternalLink
 									href='https://www.ableton.com/en/classroom'
 									className="after:content-['>'] after:ml-1 after:font-thin">
 									Ableton for the Classroom
-								</a>
+								</SafeExternalLink>
 							</li>
 							<li>
-								<a
-									referrerPolicy='no-referrer'
-									rel='noreferrer'
+								<SafeExternalLink
 									href='https://www.ableton.com/en/colleges-universities'
 									className="after:content-['>'] after:ml-1 after:font-thin">
 									Ableton for Colleges and Universities
-								</a>
+								</SafeExternalLink>
 							</li>
 						</ul>
 					</section>
@@ -160,31 +137,25 @@ const AbletonFooter = () => {
 						<h3 className='font-semibold'>Community</h3>
 						<ul className='flex flex-col gap-2 lg:gap-0'>
 							<li>
-								<a
-									referrerPolicy='no-referrer'
-									rel='noreferrer'
+								<SafeExternalLink
 									href='https://www.ableton.com/en/community/user-groups'
 									className="after:content-['>'] after:ml-1 after:font-thin">
 									Find Ableton User Groups
-								</a>
+								</SafeExternalLink>
 							</li>
 							<li>
-								<a
-									referrerPolicy='no-referrer'
-									rel='noreferrer'
+								<SafeExternalLink
 									href='https://www.ableton.com/en/certified-training'
 									className="after:content-['>'] after:ml-1 after:font-thin">
 									Find Certified Training
-								</a>
+								</SafeExternalLink>
 							</li>
 							<li>
-								<a
-									referrerPolicy='no-referrer'
-									rel='noreferrer'
+								<SafeExternalLink
 									href='https://www.ableton.com/en/education/certification-program'
 									className="after:content-['>'] after:ml-1 after:font-thin">
 									Become a Certified Trainer
-								</a>
+								</SafeExternalLink>
 							</li>
 						</ul>
 					</section>
@@ -263,65 +234,44 @@ const AbletonFooter = () => {
 					</section>
 					<ul className='flex flex-col gap-2 lg:text-sm font-medium lg:flex-row col-span-2'>
 						<li>
-							<a
-								referrerPolicy='no-referrer'
-								rel='noreferrer'
-								href='https://www.ableton.com/en/contact-us'>
+							<SafeExternalLink href='https://www.ableton.com/en/contact-us'>
 								Contact Us
-							</a>
+							</SafeExternalLink>
 						</li>
 						<li>
-							<a
-								referrerPolicy='no-referrer'
-								rel='noreferrer'
-								href='https://www.ableton.com/en/press'>
+							<SafeExternalLink href='https://www.ableton.com/en/press'>
 								Press Resources
-							</a>
+							</SafeExternalLink>
 						</li>
 						<li>
-							<a
-								referrerPolicy='no-referrer'
-								rel='noreferrer'
-								href='https://www.ableton.com/en/legal'>
+							<SafeExternalLink href='https://www.ableton.com/en/legal'>
 								Legal Info
-							</a>
+							</SafeExternalLink>
 						</li>
 						<li>
-							<a
-								referrerPolicy='no-referrer'
-								rel='noreferrer'
-								href='https://www.ableton.com/en/privacy-policy'>
+							<SafeExternalLink href='https://www.ableton.com/en/privacy-policy'>
 								Privacy Policy
-							</a>
+							</SafeExternalLink>
 						</li>
 						<li>
-							<a
-								referrerPolicy='no-referrer'
-								rel='noreferrer'
-								href='https://www.ableton.com/en/cookie-settings'>
+							<SafeExternalLink href='https://www.ableton.com/en/cookie-settings'>
 								Cookie Settings
-							</a>
+							</SafeExternalLink>
 						</li>
 						<li>
-							<a
-								referrerPolicy='no-referrer'
-								rel='noreferrer'
-								href='https://www.ableton.com/en/imprint'>
+							<SafeExternalLink href='https://www.ableton.com/en/imprint'>
 								Imprint
-							</a>
+							</SafeExternalLink>
 						</li>
 					</ul>
 				</nav>
 				<div className='flex items-center gap-4 lg:absolute lg:bottom-0 lg:right-0 lg:flex-row-reverse'>
-					<a
-						referrerPolicy='no-referrer'
-						rel='noreferrer'
+					<SafeExternalLink
 						href='https://www.ableton.com/en/'
-						target='_blank'
 						className={`flex z-40 text-3xl lg:text-2xl ${interactiveLook.logo}`}>
 						<FaAlignJustify />
 						<FaAlignJustify />
-					</a>
+					</SafeExternalLink>
 					<span className='block h-full lg:font-medium lg:text-sm'>
 						Made in Berlin
 					</span>

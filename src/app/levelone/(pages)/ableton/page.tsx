@@ -19,6 +19,7 @@ import {
 } from './_components_/images';
 
 import { outfit } from './_components_/styles';
+import { SafeExternalLink } from '@/components/global/Commons';
 
 const AbletonAboutPage = () => {
 	return (
@@ -34,37 +35,29 @@ const AbletonAboutPage = () => {
 				<AbletonSection>
 					<h2 className='text-xl lg:text-3xl font-medium'>
 						We make{' '}
-						<a
-							referrerPolicy='no-referrer'
-							rel='noreferrer'
+						<SafeExternalLink
 							href='https://www.ableton.com/en/live'
 							className='text-blue-600'>
 							Live
-						</a>
+						</SafeExternalLink>
 						,{' '}
-						<a
-							referrerPolicy='no-referrer'
-							rel='noreferrer'
+						<SafeExternalLink
 							href='https://www.ableton.com/en/push'
 							className='text-blue-600'>
 							Push
-						</a>
+						</SafeExternalLink>
 						,{' '}
-						<a
-							referrerPolicy='no-referrer'
-							rel='noreferrer'
+						<SafeExternalLink
 							href='https://www.ableton.com/en/note'
 							className='text-blue-600'>
 							Note
-						</a>{' '}
+						</SafeExternalLink>
 						and{' '}
-						<a
-							referrerPolicy='no-referrer'
-							rel='noreferrer'
+						<SafeExternalLink
 							href='https://www.ableton.com/en/link'
 							className='text-blue-600'>
 							Link
-						</a>{' '}
+						</SafeExternalLink>{' '}
 						— unique software and hardware for music creation and performance.
 						With these products, our community of users creates amazing things.
 					</h2>
@@ -233,13 +226,11 @@ const AbletonAboutPage = () => {
 							there&apos;s so much more to come. If you&apos;d like to be a part
 							of it, please join us.
 						</h2>
-						<a
-							referrerPolicy='no-referrer'
-							rel='noreferrer'
+						<SafeExternalLink
 							href='https://www.ableton.com/en/jobs'
 							className="text-blue-700 after:content-['>']">
 							See latest jobs
-						</a>
+						</SafeExternalLink>
 					</section>
 				</div>
 			</main>
