@@ -1,10 +1,10 @@
 import {
-	FaAlignJustify,
-	FaFacebook,
-	FaInstagram,
-	FaTwitter,
-	FaYoutube,
-} from 'react-icons/fa';
+	IoReorderFourSharp,
+	IoLogoFacebook,
+	IoLogoInstagram,
+	IoLogoTwitter,
+	IoLogoYoutube,
+} from 'react-icons/io5';
 
 import interactiveLook from './interactive.module.scss';
 import globalLook from '@/styles/globals.module.scss';
@@ -69,7 +69,7 @@ const AbletonFooter = () => {
 								<SafeExternalLink
 									href='facebook.com/ableton'
 									className='block p-1.5 bg-blue-600'>
-									<FaFacebook />
+									<IoLogoFacebook />
 									<span className={globalLook.hiddenAccessibleText}>
 										Facebook
 									</span>
@@ -79,7 +79,7 @@ const AbletonFooter = () => {
 								<SafeExternalLink
 									href='twitter.com/ableton'
 									className='block p-1.5 bg-sky-500'>
-									<FaTwitter />
+									<IoLogoTwitter />
 									<span className={globalLook.hiddenAccessibleText}>
 										Twitter
 									</span>
@@ -89,7 +89,7 @@ const AbletonFooter = () => {
 								<SafeExternalLink
 									href='youtube.com/ableton'
 									className='block p-1.5 bg-red-500'>
-									<FaYoutube />
+									<IoLogoYoutube />
 									<span className={globalLook.hiddenAccessibleText}>
 										YouTube
 									</span>
@@ -99,7 +99,7 @@ const AbletonFooter = () => {
 								<SafeExternalLink
 									href='instagram.com/ableton'
 									className='block p-1.5 bg-orange-500'>
-									<FaInstagram />
+									<IoLogoInstagram />
 									<span className={globalLook.hiddenAccessibleText}>
 										Instagram
 									</span>
@@ -269,8 +269,8 @@ const AbletonFooter = () => {
 					<SafeExternalLink
 						href='https://www.ableton.com/en/'
 						className={`flex z-40 text-3xl lg:text-2xl ${interactiveLook.logo}`}>
-						<FaAlignJustify />
-						<FaAlignJustify />
+						<IoReorderFourSharp />
+						<IoReorderFourSharp />
 					</SafeExternalLink>
 					<span className='block h-full lg:font-medium lg:text-sm'>
 						Made in Berlin

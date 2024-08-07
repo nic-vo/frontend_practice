@@ -3,12 +3,12 @@
 import { useEffect, useRef, useState } from 'react';
 
 import {
-	FaPlus,
-	FaAlignJustify,
-	FaMinus,
-	FaCaretUp,
-	FaCaretDown,
-} from 'react-icons/fa';
+	IoAdd,
+	IoMenu,
+	IoRemove,
+	IoChevronUp,
+	IoChevronDown,
+} from 'react-icons/io5';
 
 import { outfit } from './AbletonStyles';
 import interactiveLook from './interactive.module.scss';
@@ -69,14 +69,14 @@ const AbletonHeader = () => {
 					href='https://www.ableton.com/en/'
 					target='_blank'
 					className={`absolute flex z-40 ml-4 lg:ml-8 mt-4 text-3xl ${interactiveLook.logo}`}>
-					<FaAlignJustify />
-					<FaAlignJustify />
+					<IoMenu />
+					<IoMenu />
 					<span className={globalLook.hiddenAccessibleText}>Home</span>
 				</a>
 				<button
 					onClick={() => setToggled(!toggled)}
 					className='absolute flex lg:hidden items-center gap-2 ml-24 mt-4 font-medium text-xl z-40'>
-					Menu {toggled ? <FaCaretUp /> : <FaCaretDown />}
+					Menu {toggled ? <IoChevronUp /> : <IoChevronDown />}
 				</button>
 				<div className={weirdDivClasser(toggled)}>
 					<ul className={firstULClasser()}>
@@ -119,7 +119,7 @@ const AbletonHeader = () => {
 							<button
 								onClick={() => setToggled(!toggled)}
 								className='flex items-center gap-2 text-inherit lg:text-red-400'>
-								More {toggled ? <FaMinus /> : <FaPlus />}
+								More {toggled ? <IoRemove /> : <IoAdd />}
 							</button>
 						</li>
 						<li>
