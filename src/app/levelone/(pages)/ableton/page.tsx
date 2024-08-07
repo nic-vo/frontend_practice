@@ -18,7 +18,7 @@ import {
 	turntables,
 } from './_components_/images';
 
-import { outfit } from './_components_/styles';
+import { outfit } from './_components_/AbletonStyles';
 import { SafeExternalLink } from '@/components/global/Commons';
 
 const AbletonAboutPage = () => {
