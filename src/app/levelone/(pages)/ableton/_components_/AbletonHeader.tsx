@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import {
 	IoAdd,
-	IoMenu,
+	IoReorderFourSharp,
 	IoRemove,
 	IoChevronUp,
 	IoChevronDown,
@@ -68,15 +68,15 @@ const AbletonHeader = () => {
 					referrerPolicy='no-referrer'
 					href='https://www.ableton.com/en/'
 					target='_blank'
-					className={`absolute flex z-40 ml-4 lg:ml-8 mt-4 text-3xl ${interactiveLook.logo}`}>
-					<IoMenu />
-					<IoMenu />
+					className={`absolute flex z-40 ml-4 lg:ml-8 mt-4 text-4xl ${interactiveLook.logo}`}>
+					<IoReorderFourSharp aria-hidden />
+					<IoReorderFourSharp aria-hidden />
 					<span className={globalLook.hiddenAccessibleText}>Home</span>
 				</a>
 				<button
 					onClick={() => setToggled(!toggled)}
 					className='absolute flex lg:hidden items-center gap-2 ml-24 mt-4 font-medium text-xl z-40'>
-					Menu {toggled ? <IoChevronUp /> : <IoChevronDown />}
+					Menu {toggled ? <IoChevronUp aria-hidden /> : <IoChevronDown aria-hidden />}
 				</button>
 				<div className={weirdDivClasser(toggled)}>
 					<ul className={firstULClasser()}>

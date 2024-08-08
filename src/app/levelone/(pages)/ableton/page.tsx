@@ -1,8 +1,8 @@
 import {
-	Header,
+	AbletonHeader,
 	AbletonSection,
 	AbletonHero,
-	Footer,
+	AbletonFooter,
 	AbletonCookies,
 } from './_components_';
 import Image from 'next/image';
@@ -25,7 +25,7 @@ const AbletonAboutPage = () => {
 	return (
 		<div className='bg-zinc-100 flex flex-col items-center overflow-hidden'>
 			<AbletonCookies />
-			<Header />
+			<AbletonHeader />
 			<main
 				className={
 					outfit.className +
@@ -52,7 +52,7 @@ const AbletonAboutPage = () => {
 							className='text-blue-600'>
 							Note
 						</SafeExternalLink>
-						and{' '}
+						{' '}and{' '}
 						<SafeExternalLink
 							href='https://www.ableton.com/en/link'
 							className='text-blue-600'>
@@ -234,7 +234,7 @@ const AbletonAboutPage = () => {
 					</section>
 				</div>
 			</main>
-			<Footer />
+			<AbletonFooter />
 		</div>
 	);
 };

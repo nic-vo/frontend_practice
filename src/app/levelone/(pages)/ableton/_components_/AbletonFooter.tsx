@@ -268,9 +268,9 @@ const AbletonFooter = () => {
 				<div className='flex items-center gap-4 lg:absolute lg:bottom-0 lg:right-0 lg:flex-row-reverse'>
 					<SafeExternalLink
 						href='https://www.ableton.com/en/'
-						className={`flex z-40 text-3xl lg:text-2xl ${interactiveLook.logo}`}>
-						<IoReorderFourSharp />
-						<IoReorderFourSharp />
+						className={`flex z-40 text-3xl lg:text-4xl ${interactiveLook.logo}`}>
+						<IoReorderFourSharp aria-hidden />
+						<IoReorderFourSharp aria-hidden />
 					</SafeExternalLink>
 					<span className='block h-full lg:font-medium lg:text-sm'>
 						Made in Berlin
