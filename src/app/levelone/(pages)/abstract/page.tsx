@@ -1,19 +1,26 @@
+import AbstractFooter from './_components_/AbstractFooter';
+import AbstractHeader from './_components_/AbstractHeader';
+
 const AbstractHomepage = () => {
 	return (
-		<main>
-			<h1>Abstract Clone</h1>
-			<section>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-				reprehenderit, ipsum maxime odio tenetur animi tempora neque optio
-				expedita saepe repellendus iure, nobis laboriosam ipsa, doloribus
-				aliquid nostrum repellat consectetur!
-			</section>
-		</main>
+		<>
+			<AbstractHeader />
+			<main>
+				<section>
+					<div>
+						<h2>How can we help?</h2>
+						{/* TODO: Search bar that redirects to appropriate URL */}
+					</div>
+				</section>
+				<div></div>
+			</main>
+			<AbstractFooter />
+		</>
 	);
 };
 
 export default AbstractHomepage;
 
 export const metadata = {
-	title: 'Nic Vo | Abstract Clone',
+	title: 'Abstract Clone',
 };
