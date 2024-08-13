@@ -1,12 +1,14 @@
 'use client';
 
+import useAbstractSearch from '../_hooks';
+
 import { useEffect, useRef, useState } from 'react';
 import { IoClose, IoSearch } from 'react-icons/io5';
 import { twMerge } from 'tailwind-merge';
 
 const AbstractHeaderSearch = () => {
 	const [toggled, setToggled] = useState(false);
-	const [query, setQuery] = useState('');
+	const { query, setQuery } = useAbstractSearch();
 	const toggleRef = useRef<HTMLButtonElement>(null);
 	const labelRef = useRef<HTMLLabelElement>(null);
 
