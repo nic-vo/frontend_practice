@@ -1,4 +1,4 @@
-import { Outfit, Work_Sans } from 'next/font/google';
+import { Outfit, Karla } from 'next/font/google';
 
 const defaultOptions = {
 	preload: false,
@@ -12,7 +12,7 @@ export const outfit = Outfit({
 	fallback: ['ui-sans-serif', 'sans-serif', 'system-ui'],
 });
 
-export const worksans = Work_Sans({
+export const karla = Karla({
 	weight: 'variable',
 	subsets: ['latin', 'latin-ext'],
 	preload: false,
