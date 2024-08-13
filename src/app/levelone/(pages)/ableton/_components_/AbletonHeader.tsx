@@ -76,7 +76,12 @@ const AbletonHeader = () => {
 				<button
 					onClick={() => setToggled(!toggled)}
 					className='absolute flex lg:hidden items-center gap-2 ml-24 mt-4 font-medium text-xl z-40'>
-					Menu {toggled ? <IoChevronUp aria-hidden /> : <IoChevronDown aria-hidden />}
+					Menu{' '}
+					{toggled ? (
+						<IoChevronUp aria-hidden />
+					) : (
+						<IoChevronDown aria-hidden />
+					)}
 				</button>
 				<div className={weirdDivClasser(toggled)}>
 					<ul className={firstULClasser()}>
