@@ -8,11 +8,13 @@ const defaultOptions = {
 export const outfit = Outfit({
 	weight: 'variable',
 	subsets: ['latin', 'latin-ext'],
-	...defaultOptions,
+	preload: false,
+	fallback: ['ui-sans-serif', 'sans-serif', 'system-ui'],
 });
 
 export const worksans = Work_Sans({
 	weight: 'variable',
 	subsets: ['latin', 'latin-ext'],
-	...defaultOptions,
+	preload: false,
+	fallback: ['ui-sans-serif', 'sans-serif', 'system-ui'],
 });
