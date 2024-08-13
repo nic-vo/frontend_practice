@@ -1,15 +1,17 @@
-export const SafeExternalLink = (props: {
-	href: string;
+import { AnchorHTMLAttributes } from 'react';
+
+export const SafeExternalLink = ({
+	children,
+	...attrs
+}: {
 	children: React.ReactNode;
-	className?: string;
-	id?: string;
-}) => {
-	const { href, children, className, id } = props;
+} & Omit<
+	AnchorHTMLAttributes<HTMLAnchorElement>,
+	'target' | 'rel' | 'referrerPolicy'
+>) => {
 	return (
 		<a
-			href={href}
-			className={className ?? ''}
-			id={id ?? ''}
+			{...attrs}
 			target='_blank'
 			rel='noreferrer'
 			referrerPolicy='no-referrer'>
