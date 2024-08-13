@@ -10,7 +10,7 @@ import {
 	IoChevronDown,
 } from 'react-icons/io5';
 
-import { outfit } from './AbletonStyles';
+import { outfit } from '@/styles/fonts';
 import interactiveLook from './interactive.module.scss';
 import globalLook from '@/styles/globals.module.scss';
 import { SafeExternalLink } from '@/components/global/Commons';

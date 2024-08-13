@@ -18,7 +18,7 @@ import {
 	turntables,
 } from './_components_/images';
 
-import { outfit } from './_components_/AbletonStyles';
+import { outfit } from '@/styles/fonts';
 import { SafeExternalLink } from '@/components/global/Commons';
 
 const AbletonAboutPage = () => {
@@ -51,8 +51,8 @@ const AbletonAboutPage = () => {
 							href='https://www.ableton.com/en/note'
 							className='text-blue-600'>
 							Note
-						</SafeExternalLink>
-						{' '}and{' '}
+						</SafeExternalLink>{' '}
+						and{' '}
 						<SafeExternalLink
 							href='https://www.ableton.com/en/link'
 							className='text-blue-600'>
