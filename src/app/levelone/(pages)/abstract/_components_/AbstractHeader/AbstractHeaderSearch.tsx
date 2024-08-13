@@ -8,16 +8,9 @@ import { twMerge } from 'tailwind-merge';
 
 const AbstractHeaderSearch = () => {
 	const [toggled, setToggled] = useState(false);
-	const { query, setQuery } = useAbstractSearch();
+	const { query, setQuery, submitHandler } = useAbstractSearch();
 	const toggleRef = useRef<HTMLButtonElement>(null);
 	const labelRef = useRef<HTMLLabelElement>(null);
-
-	const submitHandler = (e: React.FormEvent) => {
-		e.preventDefault();
-		window.location.assign(
-			`https://help.abstract.com/hc/en-us/search?utf8=✓&query=${encodeURIComponent(query)}`,
-		);
-	};
 
 	const toggleHandler = () => setToggled(!toggled);
 
