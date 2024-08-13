@@ -30,7 +30,7 @@ const AbstractHeaderSearch = () => {
 		<>
 			<button
 				aria-label='Toggle header search bar'
-				className='block size-max lg:hidden hover:scale-125 focus-visible:outline outline-white rounded-lg transition-all p-2 outline-2'
+				className='block size-max lg:hidden hover:scale-125 focus-visible:outline outline-white rounded-lg transition-all p-2 outline-2 ml-auto'
 				onClick={toggleHandler}
 				disabled={toggled}
 				aria-pressed={toggled}>
@@ -39,7 +39,7 @@ const AbstractHeaderSearch = () => {
 			<form
 				onSubmit={submitHandler}
 				className={twMerge(
-					'absolute w-full h-full left-0 top-0 bg-white text-black lg:hidden justify-center',
+					'absolute w-full h-full left-0 top-0 bg-white text-black lg:hidden justify-center z-10',
 					toggled ? 'flex' : 'hidden',
 				)}>
 				<fieldset
@@ -54,7 +54,7 @@ const AbstractHeaderSearch = () => {
 						</span>
 						<input
 							id='header-search'
-							type='text'
+							type='search'
 							placeholder='Search'
 							value={query}
 							onChange={(e) => setQuery(e.target.value)}
