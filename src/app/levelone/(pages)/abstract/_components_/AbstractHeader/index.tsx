@@ -5,7 +5,7 @@ import MiniMenu from './MiniMenu';
 
 const AbstractHeader = () => {
 	return (
-		<header className='flex justify-between bg-black text-white text-2xl px-4 items-center'>
+		<header className='flex justify-between bg-black text-white text-2xl p-4 items-center'>
 			<nav className='shrink-0'>
 				<ul className='flex gap-2 divide-x *:block items-center'>
 					<li>
