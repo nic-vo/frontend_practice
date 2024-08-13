@@ -1,4 +1,4 @@
-import { karla } from '@/styles/fonts';
+import { publicsans } from '@/styles/fonts';
 import {
 	AbstractFooter,
 	AbstractHeader,
@@ -7,7 +7,7 @@ import {
 
 const AbstractHomepage = () => {
 	return (
-		<div className={karla.className}>
+		<div className={publicsans.className}>
 			<AbstractHeader />
 			<main>
 				<div className='flex flex-col items-center py-32 bg-indigo-100 gap-8'>
