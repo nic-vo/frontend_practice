@@ -1,12 +1,26 @@
 'use client';
 
 import { SafeExternalLink } from '@/components/global/Commons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { IoClose, IoMenu } from 'react-icons/io5';
 import { twMerge } from 'tailwind-merge';
 
 const MiniMenu = () => {
 	const [toggled, setToggled] = useState(false);
+
+	useEffect(() => {
+		if (window.innerWidth > 1024) setToggled(true);
+	}, []);
+	// Listen to window resize to handle tab indices
+	useEffect(() => {
+		const resizeListener = () => {
+			if (window.innerWidth > 1024) setToggled(true);
+			else setToggled(false);
+		};
+
+		window.addEventListener('resize', resizeListener);
+		return () => window.removeEventListener('resize', resizeListener);
+	}, []);
 
 	return (
 		<>
