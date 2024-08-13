@@ -1,6 +1,6 @@
 import { SafeExternalLink } from '@/components/global/Commons';
 import { CgAbstract } from 'react-icons/cg';
-import HeaderSearch from './HeaderSearch';
+import AbstractHeaderSearch from './AbstractHeaderSearch';
 import MiniMenu from './MiniMenu';
 
 const AbstractHeader = () => {
@@ -28,7 +28,7 @@ const AbstractHeader = () => {
 					</li>
 				</ul>
 			</nav>
-			<HeaderSearch />
+			<AbstractHeaderSearch />
 			<MiniMenu />
 		</header>
 	);

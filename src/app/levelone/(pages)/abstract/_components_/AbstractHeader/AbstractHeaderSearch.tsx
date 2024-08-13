@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { IoClose, IoSearch } from 'react-icons/io5';
 import { twMerge } from 'tailwind-merge';
 
-const HeaderSearch = () => {
+const AbstractHeaderSearch = () => {
 	const [toggled, setToggled] = useState(false);
 	const [query, setQuery] = useState('');
 	const toggleRef = useRef<HTMLButtonElement>(null);
@@ -72,4 +72,4 @@ const HeaderSearch = () => {
 	);
 };
 
-export default HeaderSearch;
+export default AbstractHeaderSearch;
