@@ -1,13 +1,9 @@
-.toggled > :nth-child(n + 2) {
+.toggled> :nth-child(n + 2) {
 	display: flex;
 }
 
-.spaced > :nth-last-child(2) {
+.spaced> :nth-last-child(2) {
 	margin-left: 0;
-}
-
-.logo > :first-child {
-	transform: rotate(90deg);
 }
 
 .selDis {
@@ -23,7 +19,7 @@
 		display: flex;
 	}
 
-	.spaced > :nth-last-child(2) {
+	.spaced> :nth-last-child(2) {
 		margin-left: auto;
 	}
 }

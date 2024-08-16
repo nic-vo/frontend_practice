@@ -12,7 +12,6 @@ import {
 
 import { outfit } from '@/styles/fonts';
 import interactiveLook from './interactive.module.scss';
-import globalLook from '@/styles/globals.module.scss';
 import { SafeExternalLink } from '@/components/global/Commons';
 
 const weirdDivClasser = (toggled: boolean) => {
@@ -46,8 +45,6 @@ const firstULClasser = () => {
 		'lg:ml-24',
 		'font-semibold',
 		'text-lg',
-		interactiveLook.list,
-		interactiveLook.spaced,
 	].join(' ');
 };
 
@@ -68,10 +65,13 @@ const AbletonHeader = () => {
 					referrerPolicy='no-referrer'
 					href='https://www.ableton.com/en/'
 					target='_blank'
-					className={`absolute flex z-40 ml-4 lg:ml-8 mt-4 text-4xl ${interactiveLook.logo}`}>
+					className='absolute flex z-40 ml-4 lg:ml-8 mt-4 text-4xl'>
+					<IoReorderFourSharp
+						aria-hidden
+						className='rotate-90'
+					/>
 					<IoReorderFourSharp aria-hidden />
-					<IoReorderFourSharp aria-hidden />
-					<span className={globalLook.hiddenAccessibleText}>Home</span>
+					<span className='sr-only'>Home</span>
 				</a>
 				<button
 					onClick={() => setToggled(!toggled)}
@@ -127,7 +127,7 @@ const AbletonHeader = () => {
 								More {toggled ? <IoRemove /> : <IoAdd />}
 							</button>
 						</li>
-						<li>
+						<li className='ml-auto'>
 							<SafeExternalLink
 								href='https://www.ableton.com/en/trial'
 								className='text-inherit lg:text-blue-700'>

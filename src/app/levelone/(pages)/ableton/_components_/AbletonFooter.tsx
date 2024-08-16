@@ -5,9 +5,6 @@ import {
 	IoLogoTwitter,
 	IoLogoYoutube,
 } from 'react-icons/io5';
-
-import interactiveLook from './interactive.module.scss';
-import globalLook from '@/styles/globals.module.scss';
 import { SafeExternalLink } from '@/components/global/Commons';
 
 const AbletonFooter = () => {
@@ -70,9 +67,7 @@ const AbletonFooter = () => {
 									href='facebook.com/ableton'
 									className='block p-1.5 bg-blue-600'>
 									<IoLogoFacebook />
-									<span className={globalLook.hiddenAccessibleText}>
-										Facebook
-									</span>
+									<span className='sr-only'>Facebook</span>
 								</SafeExternalLink>
 							</li>
 							<li>
@@ -80,9 +75,7 @@ const AbletonFooter = () => {
 									href='twitter.com/ableton'
 									className='block p-1.5 bg-sky-500'>
 									<IoLogoTwitter />
-									<span className={globalLook.hiddenAccessibleText}>
-										Twitter
-									</span>
+									<span className='sr-only'>Twitter</span>
 								</SafeExternalLink>
 							</li>
 							<li>
@@ -90,9 +83,7 @@ const AbletonFooter = () => {
 									href='youtube.com/ableton'
 									className='block p-1.5 bg-red-500'>
 									<IoLogoYoutube />
-									<span className={globalLook.hiddenAccessibleText}>
-										YouTube
-									</span>
+									<span className='sr-only'>YouTube</span>
 								</SafeExternalLink>
 							</li>
 							<li>
@@ -100,9 +91,7 @@ const AbletonFooter = () => {
 									href='instagram.com/ableton'
 									className='block p-1.5 bg-orange-500'>
 									<IoLogoInstagram />
-									<span className={globalLook.hiddenAccessibleText}>
-										Instagram
-									</span>
+									<span className='sr-only'>Instagram</span>
 								</SafeExternalLink>
 							</li>
 						</ul>
@@ -165,7 +154,7 @@ const AbletonFooter = () => {
 							<form>
 								<label
 									htmlFor='language'
-									className={globalLook.hiddenAccessibleText}>
+									className='sr-only'>
 									Language
 								</label>
 								<select
@@ -183,7 +172,7 @@ const AbletonFooter = () => {
 							<form className='flex-grow'>
 								<label
 									htmlFor='location'
-									className={globalLook.hiddenAccessibleText}>
+									className='sr-only'>
 									Location
 								</label>
 								<select
@@ -268,8 +257,11 @@ const AbletonFooter = () => {
 				<div className='flex items-center gap-4 lg:absolute lg:bottom-0 lg:right-0 lg:flex-row-reverse'>
 					<SafeExternalLink
 						href='https://www.ableton.com/en/'
-						className={`flex z-40 text-3xl lg:text-4xl ${interactiveLook.logo}`}>
-						<IoReorderFourSharp aria-hidden />
+						className='flex z-40 text-3xl lg:text-4xl'>
+						<IoReorderFourSharp
+							aria-hidden
+							className='rotate-90'
+						/>
 						<IoReorderFourSharp aria-hidden />
 					</SafeExternalLink>
 					<span className='block h-full lg:font-medium lg:text-sm'>

@@ -5,8 +5,6 @@ import { usePathname } from 'next/navigation';
 import { useState, PropsWithChildren, useEffect, useRef } from 'react';
 import { FaHome, FaInfoCircle, FaList, FaTimes } from 'react-icons/fa';
 
-import interactiveLook from '@/styles/globals.module.scss';
-
 const toggleClass =
 	'flex gap-2 bg-rose-500 hover:text-black hover:bg-white hover:text-black hover:bg-white border-2 p-4 rounded-lg z-[60] shadow-md transition-all';
 
@@ -47,7 +45,7 @@ const ToggleAside = (props: PropsWithChildren) => {
 							id='toggleInfoPanel'
 							className={toggleClass}>
 							<FaInfoCircle />
-							<span className={interactiveLook.hiddenAccessibleText}>
+							<span className='sr-only'>
 								{!toggled ? 'Close' : 'Open'} info panel
 							</span>
 						</button>
@@ -57,9 +55,7 @@ const ToggleAside = (props: PropsWithChildren) => {
 							href={`/${pathSegments[0]}`}
 							className={toggleClass}>
 							<FaList />
-							<span className={interactiveLook.hiddenAccessibleText}>
-								Back to index
-							</span>
+							<span className='sr-only'>Back to index</span>
 						</Link>
 					</li>
 					<li>
@@ -67,9 +63,7 @@ const ToggleAside = (props: PropsWithChildren) => {
 							href='/'
 							className={toggleClass}>
 							<FaHome />
-							<span className={interactiveLook.hiddenAccessibleText}>
-								Back to home
-							</span>
+							<span className='sr-only'>Back to home</span>
 						</Link>
 					</li>
 				</ul>
