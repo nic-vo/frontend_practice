@@ -34,6 +34,7 @@ const ToggleAside = (props: PropsWithChildren) => {
 		}
 	}, [toggled]);
 
+	if (pathSegments.length < 2) return null;
 	return (
 		<aside
 			className={`fixed bottom-0 right-0 lg:bottom-2 lg:right-2 flex flex-col gap-2 bg-black text-white h-full w-full max-w-prose lg:max-w-[33svw] max-h-[50svh] lg:max-h-[75svh] z-10 transition-all ${toggled ? 'translate-x-full lg:translate-x-[calc(100%+2rem)] shadow-none' : 'translate-x-0 shadow-2xl'} rounded-t-3xl lg:rounded-3xl text-base lg:text-lg p-8 gap-8 flex flex-col z-50`}>

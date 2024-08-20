@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import { getPages } from '@/lib/pages';
+import { LayoutDefaultMetadata } from '@/components/panel';
 
 const segment = 'levelone';
 
 const LevelOneIndex = async () => {
-	const pages = await getPages(['app', segment, '(pages)']);
+	const pages = await getPages(['app', segment]);
 
 	return (
 		<main>
@@ -37,6 +38,4 @@ const LevelOneIndex = async () => {
 
 export default LevelOneIndex;
 
-export const metadata = {
-	title: 'Nicolas Vo | Level One Clones',
-};
+export const metadata = { title: 'Level One Clones' };
