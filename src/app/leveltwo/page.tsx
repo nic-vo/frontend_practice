@@ -4,7 +4,7 @@ import { getPages } from '@/lib/pages';
 const segment = 'leveltwo';
 
 const LevelTwoIndex = async () => {
-	const pages = await getPages(['app', segment, '(pages)']);
+	const pages = await getPages(['app', segment]);
 
 	return (
 		<main>
@@ -38,5 +38,5 @@ const LevelTwoIndex = async () => {
 export default LevelTwoIndex;
 
 export const metadata = {
-	title: 'Nicolas Vo | Level Two Clones',
+	title: 'Level Two Clones',
 };

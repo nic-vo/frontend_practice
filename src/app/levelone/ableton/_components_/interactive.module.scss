@@ -1,0 +1,25 @@
+.toggled> :nth-child(n + 2) {
+	display: flex;
+}
+
+.spaced> :nth-last-child(2) {
+	margin-left: 0;
+}
+
+.selDis {
+	display: flex;
+}
+
+@media (min-width: 1024px) {
+	.selDis {
+		display: none;
+	}
+
+	.toggled .selDis {
+		display: flex;
+	}
+
+	.spaced> :nth-last-child(2) {
+		margin-left: auto;
+	}
+}
