@@ -36,7 +36,10 @@ const IssueSellLink = ({
 }) => (
 	<SafeExternalLink
 		href={href}
-		className={twMerge(['text-white', className])}>
+		className={twMerge([
+			'text-white focus-visible:outline outline-offset-2 outline-black hover:underline',
+			className,
+		])}>
 		{children}
 	</SafeExternalLink>
 );
@@ -187,3 +190,5 @@ export const BSTContentElements = [
 		</IssueSection>
 	),
 ];
+
+export const BSTContentLength = BSTContentElements.length;
