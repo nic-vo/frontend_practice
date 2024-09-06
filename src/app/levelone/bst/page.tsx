@@ -1,16 +1,28 @@
-export default function BackstageTalksHomepage() {
+import { BSTContentElements } from './_components/Content';
+import BSTMain from './_components/BSTMain';
+import { BSTScrollProvider } from './_components/BSTScroll';
+import BSTHeader from './_components/BSTHeader';
+import BSTFooter from './_components/BSTFooter';
+
+const BSTHomepage = () => {
 	return (
-		<main>
-			<h1>Backstage Talks Clone</h1>
-			<section>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-				reprehenderit, ipsum maxime odio tenetur animi tempora neque optio
-				expedita saepe repellendus iure, nobis laboriosam ipsa, doloribus
-				aliquid nostrum repellat consectetur!
-			</section>
-		</main>
+		<BSTScrollProvider>
+			<BSTMain>
+				<BSTHeader />
+				<ul className='h-full sm:overflow-hidden scroll-smooth'>
+					{BSTContentElements.map((IssueComponent, index) => (
+						<li key={`map${index}`}>
+							<IssueComponent />
+						</li>
+					))}
+				</ul>
+				<BSTFooter />
+			</BSTMain>
+		</BSTScrollProvider>
 	);
-}
+};
+
+export default BSTHomepage;
 
 export const metadata = {
 	title: 'Backstage Talks Clone',
