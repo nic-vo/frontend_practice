@@ -25,7 +25,7 @@ export const IssueSection = ({
 				for (const entity of entities) {
 					if (!entity.isIntersecting) continue;
 					setScreen(8 - id);
-					if (window.innerWidth > 640) continue;
+					if (window.innerWidth > 768) continue;
 					history.pushState(
 						{},
 						'',
@@ -43,7 +43,7 @@ export const IssueSection = ({
 			ref={ref}
 			id={`issue${id}`}
 			{...attrs}
-			className='flex flex-col justify-center items-center gap-4 h-lvh font-semibold text-lg *:text-center'>
+			className='flex flex-col justify-center items-center gap-4 h-lvh font-semibold text-lg *:text-center max-w-xs lg:max-w-md'>
 			{children}
 		</section>
 	);

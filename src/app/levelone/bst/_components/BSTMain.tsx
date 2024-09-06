@@ -12,7 +12,7 @@ const BSTMain = ({ children }: PropsWithChildren) => {
 		<main
 			className={twMerge([
 				BSTBgColors[screen] ?? 'bg-white',
-				'sm:h-lvh transition-all',
+				'md:h-lvh transition-all flex flex-col items-center',
 			])}>
 			{children}
 		</main>

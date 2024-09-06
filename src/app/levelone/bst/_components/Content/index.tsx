@@ -21,7 +21,7 @@ const ReorderedImage = ({
 	<Image
 		src={img}
 		alt={alt}
-		className='h-1/2 w-auto'
+		className='h-auto w-auto'
 	/>
 );
 
