@@ -11,7 +11,9 @@ const BSTHomepage = () => {
 				<BSTHeader />
 				<ul className='h-full sm:overflow-hidden scroll-smooth'>
 					{BSTContentElements.map((IssueComponent, index) => (
-						<IssueComponent key={`map${index}`} />
+						<li key={`map${index}`}>
+							<IssueComponent />
+						</li>
 					))}
 				</ul>
 				<BSTFooter />
