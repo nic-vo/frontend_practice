@@ -30,8 +30,11 @@ export const LayoutNav = (props: { upOne: string }) => {
 	);
 };
 
-export const InfoTitle = (props: { title: string }) => {
-	return <h2 className='text-3xl font-bold'>{props.title}</h2>;
+export const InfoTitle = ({
+	title,
+	children,
+}: { title?: string } & PropsWithChildren) => {
+	return <h2 className='text-3xl font-bold'>{title ?? children}</h2>;
 };
 
 export const PanelNavList = (props: PropsWithChildren) => {
