@@ -3,10 +3,10 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, PropsWithChildren, useEffect, useRef } from 'react';
-import { FaHome, FaInfoCircle, FaList, FaTimes } from 'react-icons/fa';
+import { IoHome, IoClose, IoInformationCircle, IoList } from 'react-icons/io5';
 
 const toggleClass =
-	'flex gap-2 bg-rose-500 hover:text-black hover:bg-white hover:text-black hover:bg-white border-2 p-4 rounded-lg z-[60] shadow-md transition-all';
+	'flex gap-2 bg-rose-800 hover:text-black hover:bg-white hover:text-black hover:bg-white p-4 rounded-lg z-[60] shadow-md transition-all';
 
 const ToggleAside = (props: PropsWithChildren) => {
 	const [toggled, setToggled] = useState(true);
@@ -38,24 +38,23 @@ const ToggleAside = (props: PropsWithChildren) => {
 	return (
 		<aside
 			className={`fixed bottom-0 right-0 lg:bottom-2 lg:right-2 flex flex-col gap-2 bg-black text-white h-full w-full max-w-prose lg:max-w-[33svw] max-h-[50svh] lg:max-h-[75svh] z-10 transition-all ${toggled ? 'translate-x-full lg:translate-x-[calc(100%+2rem)] shadow-none' : 'translate-x-0 shadow-2xl'} rounded-t-3xl lg:rounded-3xl text-base lg:text-lg p-8 gap-8 flex flex-col z-50`}>
-			<nav className='fixed -translate-x-full lg:-translate-x-[calc(100%+2rem)] bottom-2 -left-2'>
+			<menu className='fixed -translate-x-full lg:-translate-x-[calc(100%+2rem)] bottom-2 -left-2'>
 				<ul className='flex flex-col-reverse gap-4 text-2xl'>
 					<li>
 						<button
 							onClick={() => setToggled(!toggled)}
 							id='toggleInfoPanel'
-							className={toggleClass}>
-							<FaInfoCircle />
-							<span className='sr-only'>
-								{!toggled ? 'Close' : 'Open'} info panel
-							</span>
+							className={toggleClass}
+							aria-pressed={!toggled}>
+							<IoInformationCircle aria-hidden />
+							<span className='sr-only'>Toggle info panel</span>
 						</button>
 					</li>
 					<li>
 						<Link
 							href={`/${pathSegments[0]}`}
 							className={toggleClass}>
-							<FaList />
+							<IoList aria-hidden />
 							<span className='sr-only'>Back to index</span>
 						</Link>
 					</li>
@@ -63,12 +62,12 @@ const ToggleAside = (props: PropsWithChildren) => {
 						<Link
 							href='/'
 							className={toggleClass}>
-							<FaHome />
+							<IoHome aria-hidden />
 							<span className='sr-only'>Back to home</span>
 						</Link>
 					</li>
 				</ul>
-			</nav>
+			</menu>
 			<div
 				className='flex flex-col gap-4 overflow-hidden h-full w-full'
 				ref={divRef}>
@@ -78,7 +77,8 @@ const ToggleAside = (props: PropsWithChildren) => {
 				onClick={() => setToggled(true)}
 				className='absolute top-4 right-4 p-2 border-2 rounded-full hover:text-black hover:bg-white focus:text-black focus:bg-white transition-all'
 				tabIndex={toggled ? -1 : 0}>
-				<FaTimes />
+				<IoClose aria-hidden />
+				<span className='sr-only'>Close info panel</span>
 			</button>
 		</aside>
 	);
