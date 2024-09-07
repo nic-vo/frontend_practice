@@ -1,15 +1,14 @@
 import Link from 'next/link';
 import { getPages } from '@/lib/pages';
-import { LayoutDefaultMetadata } from '@/components/panel';
 
-const segment = 'levelone';
+const segment = 'levelthree';
 
-const LevelOneIndex = async () => {
-	const pages = await getPages(['app', segment]);
+const LevelThreeIndex = async () => {
+	const pages = await getPages(['app', '(pages)', segment]);
 
 	return (
 		<main>
-			<h1>Level One Clones</h1>
+			<h1>Level Three Clones</h1>
 			<section>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus,
 				deleniti quaerat impedit perspiciatis at quod amet laboriosam
@@ -36,6 +35,8 @@ const LevelOneIndex = async () => {
 	);
 };
 
-export default LevelOneIndex;
+export default LevelThreeIndex;
 
-export const metadata = { title: 'Level One Clones' };
+export const metadata = {
+	title: 'Level Three Clones',
+};
