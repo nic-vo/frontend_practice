@@ -1,4 +1,4 @@
-import { LayoutDefaultMetadata } from '@/components/panel';
+import { LayoutDefaultMetadata } from '@/app/(pages)/@panel/_components';
 
 const DualView = (props: {
 	children: React.ReactNode;

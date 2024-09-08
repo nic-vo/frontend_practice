@@ -1,8 +1,6 @@
-'use client';
+import { LayoutNav, TogglePanel } from '@/app/(pages)/@panel/_components';
 
-import { LayoutNav, TogglePanel } from '@/components/panel';
-
-const LevelOnePanelDefault = () => {
+const PanelDefault = () => {
 	return (
 		<TogglePanel>
 			<p>
@@ -17,4 +15,4 @@ const LevelOnePanelDefault = () => {
 	);
 };
 
-export default LevelOnePanelDefault;
+export default PanelDefault;

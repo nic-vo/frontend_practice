@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { getPages } from '@/lib/pages';
-import { LayoutDefaultMetadata } from '@/components/panel';
+import { LayoutDefaultMetadata } from '@/app/(pages)/@panel/_components';
 
 const segment = 'levelone';
 

@@ -2,8 +2,18 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState, PropsWithChildren, useEffect, useRef } from 'react';
+import {
+	useState,
+	PropsWithChildren,
+	useEffect,
+	useRef,
+	createContext,
+} from 'react';
 import { IoHome, IoClose, IoInformationCircle, IoList } from 'react-icons/io5';
+
+const AsideToggleContext = createContext(false);
+
+export default AsideToggleContext;
 
 const toggleClass =
 	'flex gap-2 bg-rose-800 hover:text-black hover:bg-white hover:text-black hover:bg-white p-4 rounded-lg z-[60] shadow-md transition-all';
@@ -84,8 +94,6 @@ const ToggleAside = (props: PropsWithChildren) => {
 	);
 };
 
-const TogglePanel = (props: PropsWithChildren) => {
+export const TogglePanel = (props: PropsWithChildren) => {
 	return <ToggleAside>{props.children}</ToggleAside>;
 };
-
-export default TogglePanel;

@@ -4,7 +4,7 @@ import {
 	OriginalNav,
 	PanelContentWrapper,
 	PanelNavList,
-} from '@/components/panel';
+} from '@/app/(pages)/@panel/_components';
 
 const AbstractPanel = () => {
 	return (
