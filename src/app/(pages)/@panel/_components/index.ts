@@ -1,4 +1,5 @@
-import AsideToggleContext, { TogglePanel } from './DualView';
+import { TogglePanel } from './DualView';
+
 import {
 	LayoutNav,
 	OriginalNav,
@@ -18,5 +19,4 @@ export {
 	PanelNavList,
 	LayoutDefaultMetadata,
 	DefaultPanelLoader,
-	AsideToggleContext,
 };
