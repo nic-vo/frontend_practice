@@ -13,7 +13,7 @@ import {
 import { IoHome, IoInformation, IoList } from 'react-icons/io5';
 import { twMerge } from 'tailwind-merge';
 
-const ToggleContext = createContext<{
+export const ToggleContext = createContext<{
 	toggled: boolean;
 	setToggled: Dispatch<SetStateAction<boolean>>;
 }>({ toggled: false, setToggled: () => {} });
@@ -26,21 +26,6 @@ const ToggleContextProvider = ({ children }: PropsWithChildren) => {
 		</ToggleContext.Provider>
 	);
 };
-
-export const PanelOriginalLink = ({
-	children,
-	href,
-}: {
-	href: string;
-	children: React.ReactNode;
-}) => (
-	<a
-		href={href}
-		target='_blank'
-		referrerPolicy='no-referrer'>
-		{children}
-	</a>
-);
 
 const MainPanelNav = () => {
 	const segments = usePathname().split('/').slice(1);
