@@ -5,8 +5,10 @@ import { usePathname } from 'next/navigation';
 import {
 	createContext,
 	Dispatch,
+	FocusEventHandler,
 	PropsWithChildren,
 	SetStateAction,
+	useCallback,
 	useContext,
 	useState,
 } from 'react';
@@ -28,22 +30,36 @@ const ToggleContextProvider = ({ children }: PropsWithChildren) => {
 };
 
 const MainPanelNav = () => {
-	const segments = usePathname().split('/').slice(1);
-	const { toggled } = useContext(ToggleContext);
+	const segment = usePathname().split('/')[1];
+	const linkRef = useRef<HTMLAnchorElement>(null);
+	const { toggled, setToggled } = useContext(ToggleContext);
+
+	const blurHandler: FocusEventHandler<HTMLAnchorElement> = useCallback(
+		(e) => {
+			if (!linkRef.current || e.relatedTarget === linkRef.current) return;
+			setToggled(false);
+		},
+		[setToggled],
+	);
+
 	return (
 		<nav>
 			<ul>
 				<li>
 					<Link
 						href='/'
-						tabIndex={toggled ? 0 : -1}>
+						tabIndex={toggled ? 0 : -1}
+						aria-hidden={!toggled}
+						ref={linkRef}>
 						Return home
 					</Link>
 				</li>
 				<li>
 					<Link
-						href={segments[0]}
-						tabIndex={toggled ? 0 : -1}>
+						href={'/' + segment}
+						tabIndex={toggled ? 0 : -1}
+						aria-hidden={!toggled}
+						onBlur={blurHandler}>
 						Return to index
 					</Link>
 				</li>
