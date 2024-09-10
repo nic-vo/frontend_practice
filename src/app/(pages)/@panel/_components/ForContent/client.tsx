@@ -4,7 +4,7 @@ import { SafeExternalLink } from '@/components/global/Commons';
 import { ToggleContext } from '../Interface';
 import { useContext } from 'react';
 
-export const PanelOriginalLink = ({
+export const PanelContentLink = ({
 	children,
 	href,
 }: {
