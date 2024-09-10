@@ -1,21 +1,8 @@
-'use client';
-
-import { TogglePanel } from '@/app/(pages)/@panel/_components';
-
 import { PropsWithChildren } from 'react';
+import MainPanelComponent from './_components/Interface';
 
-const PanelLayout = (props: PropsWithChildren) => {
-	return (
-		<TogglePanel>
-			{/*
-
-			In the @panel dir for the appropriate clone,
-			Manually construct info page using the intended global components
-
-		*/}
-			{props.children}
-		</TogglePanel>
-	);
-};
+const PanelLayout = ({ children }: PropsWithChildren) => (
+	<MainPanelComponent>{children}</MainPanelComponent>
+);
 
 export default PanelLayout;
