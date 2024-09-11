@@ -2,7 +2,7 @@ import { PropsWithChildren } from 'react';
 import { PanelContentLink } from './client';
 
 export const PanelContentWrapper = ({ children }: PropsWithChildren) => (
-	<section className='w-full overflow-auto'>{children}</section>
+	<section className='flex flex-col gap-4 flex-shrink'>{children}</section>
 );
 
 export const PanelContentTitle = ({
