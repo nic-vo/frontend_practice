@@ -1,7 +1,7 @@
-import { PanelContentWrapper } from '../../_components';
 import {
 	PanelContentLink,
 	PanelContentTitle,
+	PanelContentWrapper,
 } from '../../_components/ForContent';
 
 const AbletonPanel = () => {
