@@ -36,13 +36,14 @@ const MainPanelNav = () => {
 
 	return (
 		<menu>
-			<ul>
+			<ul className='flex gap-4 *:block'>
 				<li>
 					<Link
 						href='/'
 						tabIndex={toggled ? 0 : -1}
 						aria-hidden={!toggled}
-						ref={linkRef}>
+						ref={linkRef}
+						className='block underline underline-offset-2 focus-visible:outline outline-white outline-offset-2 font-semibold'>
 						Return home
 					</Link>
 				</li>
@@ -50,7 +51,8 @@ const MainPanelNav = () => {
 					<Link
 						href={'/' + segment}
 						tabIndex={toggled ? 0 : -1}
-						aria-hidden={!toggled}>
+						aria-hidden={!toggled}
+						className='block underline underline-offset-2 focus-visible:outline outline-white outline-offset-2 font-semibold'>
 						Return to index
 					</Link>
 				</li>
@@ -58,7 +60,8 @@ const MainPanelNav = () => {
 					<button
 						onClick={() => setToggled(false)}
 						aria-hidden={!toggled}
-						tabIndex={toggled ? 0 : -1}>
+						tabIndex={toggled ? 0 : -1}
+						className='block underline underline-offset-2 focus-visible:outline outline-white outline-offset-2 font-semibold'>
 						Close info panel
 					</button>
 				</li>
@@ -87,8 +90,10 @@ const PanelAside = ({ children }: PropsWithChildren) => {
 	return (
 		<aside
 			className={twMerge([
-				'top-0 right-0 fixed z-20 h-lvh sm:h-max w-lvw sm:max-w-lg transition-all p-6 bg-black text-white',
-				toggled ? 'translate-x-0' : 'translate-x-full',
+				'top-0 right-0 sm:top-4 sm:right-4 fixed z-50 h-lvh sm:h-max sm:rounded-3xl w-full sm:max-w-lg transition-all p-6 bg-black text-white flex flex-col gap-8',
+				toggled
+					? 'translate-x-0 sm:drop-shadow-xl'
+					: 'translate-x-full sm:translate-x-[calc(100%_+_1rem)]',
 			])}
 			aria-hidden={!toggled}
 			id='info-panel'>
