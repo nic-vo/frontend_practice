@@ -90,7 +90,7 @@ const PanelAside = ({ children }: PropsWithChildren) => {
 	return (
 		<aside
 			className={twMerge([
-				'top-0 right-0 sm:top-4 sm:right-4 fixed z-50 h-lvh sm:h-max sm:rounded-3xl w-full sm:max-w-lg transition-all p-6 bg-black text-white flex flex-col gap-8',
+				'top-0 right-0 sm:top-4 sm:right-4 fixed z-50 h-lvh sm:h-max sm:max-h-[calc(100vh_-_2rem)] sm:rounded-3xl w-full sm:max-w-lg transition-all p-6 bg-black text-white flex flex-col gap-8',
 				toggled
 					? 'translate-x-0 sm:drop-shadow-xl'
 					: 'translate-x-full sm:translate-x-[calc(100%_+_1rem)]',
@@ -136,7 +136,7 @@ const PanelAside = ({ children }: PropsWithChildren) => {
 			<button
 				onClick={() => setToggled(false)}
 				tabIndex={toggled ? 0 : -1}
-				className='absolute top-2 right-2 p-1 border-2 border-white rounded-full hover:bg-white hover:text-black focus-visible:bg-white focus-visible:text-black transition-all outline-none'>
+				className='sm:hidden absolute top-2 right-2 p-1 border-2 border-white rounded-full hover:bg-white hover:text-black focus-visible:bg-white focus-visible:text-black transition-all outline-none'>
 				<IoClose aria-hidden />
 				<span className='sr-only'>Close info panel</span>
 			</button>
