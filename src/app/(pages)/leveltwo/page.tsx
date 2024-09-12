@@ -9,12 +9,6 @@ const LevelTwoIndex = async () => {
 	return (
 		<main>
 			<h1>Level Two Clones</h1>
-			<section>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus,
-				deleniti quaerat impedit perspiciatis at quod amet laboriosam
-				voluptatibus omnis eius fugit quia rem tenetur, atque nihil doloremque
-				necessitatibus repellat. Nisi.
-			</section>
 			{pages.length === 0 ? (
 				<p>Nothing here!</p>
 			) : (
