@@ -1,4 +1,4 @@
-import { Oswald, Outfit, Public_Sans } from 'next/font/google';
+import { Oswald, Outfit, Public_Sans, DM_Sans } from 'next/font/google';
 
 const defaultOptions = {
 	preload: false,
@@ -21,6 +21,14 @@ export const publicsans = Public_Sans({
 
 export const oswald = Oswald({
 	weight: 'variable',
+	subsets: ['latin'],
+	preload: false,
+	fallback: ['ui-sans-serif', 'sans-serif', 'system-ui'],
+});
+
+export const dmsans = DM_Sans({
+	weight: 'variable',
+	style: 'normal',
 	subsets: ['latin'],
 	preload: false,
 	fallback: ['ui-sans-serif', 'sans-serif', 'system-ui'],
