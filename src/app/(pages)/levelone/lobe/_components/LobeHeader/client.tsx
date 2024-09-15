@@ -1,34 +1,86 @@
 'use client';
 
-import {
-	createContext,
-	Dispatch,
-	PropsWithChildren,
-	SetStateAction,
-	useEffect,
-	useState,
-} from 'react';
+import { SCREEN_MD } from '@/consts/tailwind';
+import { ToggleMenuContextProvider, useMenuToggle } from '@/hooks/ForMenus';
+import { IoClose, IoMenu } from 'react-icons/io5';
+import { twMerge } from 'tailwind-merge';
 
-const VisibleContext = createContext<{
-	visible: boolean;
-	setVisible: Dispatch<SetStateAction<boolean>>;
-}>({ visible: false, setVisible: () => {} });
+import type { PropsWithChildren } from 'react';
+import { SafeExternalLink } from '@/components/global/Commons';
+import LobeDLButton from '../LobeDLButton';
 
-const VisibleContextProvider = ({ children }: PropsWithChildren) => {
-	const [visible, setVisible] = useState(false);
-
-	useEffect(() => {
-		window.addEventListener('resize', (e) => {
-			if (!e.view || e.view.screenX) return;
-			if (e.view.screenX) return;
-		});
-	}, []);
-
+export const LobeHeaderParent = ({ children }: PropsWithChildren) => {
+	const { toggled } = useMenuToggle();
 	return (
-		<VisibleContext.Provider value={{ visible, setVisible }}>
+		<header
+			className={twMerge([
+				'top-0 justify-between p-4 px-8 md:px-4 fixed w-full transition-all backdrop-blur-md bg-white bg-opacity-80 grid grid-cols-2 md:flex z-50',
+				toggled ? 'drop-shadow-2xl' : '',
+			])}>
 			{children}
-		</VisibleContext.Provider>
+		</header>
 	);
 };
 
-export const LobeToggleMenu = () => null;
+export const LobeToggleNavButton = () => {
+	const { toggled, setToggled } = useMenuToggle();
+	return (
+		<button
+			onClick={() => setToggled((prev) => !prev)}
+			className='rounded-full flex items-center justify-center justify-self-end md:hidden size-8 bg-slate-200 focus-visible:outline outline-black text-xl'
+			aria-controls='header-nav'
+			aria-expanded={toggled}>
+			{toggled ? <IoClose aria-hidden /> : <IoMenu aria-hidden />}
+			<span className='sr-only'>Toggle menu</span>
+		</button>
+	);
+};
+
+export const LobeToggleNav = ({ children }: PropsWithChildren) => {
+	const { toggled } = useMenuToggle();
+	return (
+		<nav
+			id='header-nav'
+			tabIndex={toggled ? 0 : -1}
+			className={twMerge([
+				toggled ? 'h-80' : 'h-0',
+				'col-span-full md:opacity-100 md:p-0 md:h-auto md:left-auto md:flex md:py-0 md:flex-row after:md:hidden md:grow transition-all overflow-hidden w-full focus-visible:outline outline-black rounded md:overflow-visible',
+			])}>
+			{children}
+		</nav>
+	);
+};
+
+export const LobeHeaderLink = ({
+	href,
+	children,
+}: {
+	children: React.ReactNode;
+	href: string;
+}) => {
+	const { toggled } = useMenuToggle();
+	return (
+		<SafeExternalLink
+			href={href}
+			className='text-center md:text-left md:hover:scale-110 hover:text-black text-stone-600 transition-all focus-visible:outline outline-black outline-offset-2 rounded-full block md:w-min md:p-2'
+			tabIndex={toggled ? 0 : -1}>
+			{children}
+		</SafeExternalLink>
+	);
+};
+
+export const HeaderDLButton = () => {
+	const { toggled } = useMenuToggle();
+	return (
+		<LobeDLButton
+			reachable={toggled}
+			className='block text-white bg-teal-300 p-2 px-4 rounded-full hover:md:scale-110 transition-all focus-visible:outline outline-black text-center w-full md:w-max'
+		/>
+	);
+};
+
+export const LobeToggleMenuProvider = ({ children }: PropsWithChildren) => (
+	<ToggleMenuContextProvider breakpoint={SCREEN_MD}>
+		{children}
+	</ToggleMenuContextProvider>
+);
