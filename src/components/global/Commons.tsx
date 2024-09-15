@@ -1,4 +1,5 @@
-import { AnchorHTMLAttributes } from 'react';
+import { AnchorHTMLAttributes, PropsWithChildren } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 export const SafeExternalLink = ({
 	children,
@@ -19,3 +20,10 @@ export const SafeExternalLink = ({
 		</a>
 	);
 };
+
+export const InlineCode = ({
+	children,
+	className,
+}: PropsWithChildren & { className?: string }) => (
+	<span className={twMerge(['font-mono', className])}>{children}</span>
+);
