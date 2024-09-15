@@ -1,4 +1,5 @@
 import {
+	PanelContentLink,
 	PanelContentTitle,
 	PanelContentWrapper,
 } from '../../_components/ForContent';
@@ -30,6 +31,9 @@ const BSTPanel = () => (
 			</li>
 		</ol>
 		<p>All in all, I&apos;m happy with how this one turned out.</p>
+		<PanelContentLink href='https://www.backstagetalks.com'>
+			Original
+		</PanelContentLink>
 	</PanelContentWrapper>
 );
 
