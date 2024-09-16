@@ -99,7 +99,7 @@ const PanelAside = ({ children }: PropsWithChildren) => {
 			id='info-panel'>
 			<menu
 				className={twMerge([
-					'absolute bottom-4 left-0 -translate-x-full p-2',
+					'absolute bottom-8 left-0 -translate-x-full p-2',
 					toggled ? 'hidden sm:block' : 'block',
 				])}>
 				<ul className='flex flex-col gap-4 *:block'>
