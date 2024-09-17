@@ -1,6 +1,9 @@
-export default function GoDaddyHomepage() {
+import { GoDHeader } from './_components';
+
+const GoDaddyHome = () => {
 	return (
 		<main>
+			<GoDHeader />
 			<h1>GoDaddy Clone</h1>
 			<section>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
@@ -10,7 +13,9 @@ export default function GoDaddyHomepage() {
 			</section>
 		</main>
 	);
-}
+};
+
+export default GoDaddyHome;
 
 export const metadata = {
 	title: 'GoDaddy Clone',
