@@ -1,0 +1,16 @@
+.onefadein {
+  animation: 1s ease-out 0s onefadeinkey;
+  animation-fill-mode: both;
+}
+
+@keyframes onefadeinkey {
+  0% {
+    translate: -100px 0;
+    opacity: 0;
+  }
+
+  100% {
+    translate: 0 0;
+    opacity: 1
+  }
+}
