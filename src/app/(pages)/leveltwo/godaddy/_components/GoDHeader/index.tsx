@@ -1,3 +1,7 @@
-const GoDHeader = () => <header></header>;
+const GoDHeader = () => (
+	<header>
+		<nav></nav>
+	</header>
+);
 
 export default GoDHeader;
