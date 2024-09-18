@@ -1,7 +1,11 @@
 'use client';
 
 import { SCREEN_MD } from '@/consts/tailwind';
-import { ToggleMenuContextProvider, useMenuToggle } from '@/hooks/ForMenus';
+import {
+	createToggleMenuContext,
+	ToggleMenuContextProvider,
+	useMenuToggle,
+} from '@/hooks/ForMenus';
 import { IoClose, IoMenu } from 'react-icons/io5';
 import { twMerge } from 'tailwind-merge';
 
@@ -9,8 +13,10 @@ import type { PropsWithChildren } from 'react';
 import { SafeExternalLink } from '@/components/global/Commons';
 import LobeDLButton from '../LobeDLButton';
 
+const LobeHeaderContext = createToggleMenuContext();
+
 export const LobeHeaderParent = ({ children }: PropsWithChildren) => {
-	const { toggled } = useMenuToggle();
+	const { toggled } = useMenuToggle(LobeHeaderContext);
 	return (
 		<header
 			className={twMerge([
@@ -23,7 +29,7 @@ export const LobeHeaderParent = ({ children }: PropsWithChildren) => {
 };
 
 export const LobeToggleNavButton = () => {
-	const { toggled, setToggled } = useMenuToggle();
+	const { toggled, setToggled } = useMenuToggle(LobeHeaderContext);
 	return (
 		<button
 			onClick={() => setToggled((prev) => !prev)}
@@ -37,7 +43,7 @@ export const LobeToggleNavButton = () => {
 };
 
 export const LobeToggleNav = ({ children }: PropsWithChildren) => {
-	const { toggled } = useMenuToggle();
+	const { toggled } = useMenuToggle(LobeHeaderContext);
 	return (
 		<nav
 			id='header-nav'
@@ -58,7 +64,7 @@ export const LobeHeaderLink = ({
 	children: React.ReactNode;
 	href: string;
 }) => {
-	const { toggled } = useMenuToggle();
+	const { toggled } = useMenuToggle(LobeHeaderContext);
 	return (
 		<SafeExternalLink
 			href={href}
@@ -70,7 +76,7 @@ export const LobeHeaderLink = ({
 };
 
 export const HeaderDLButton = () => {
-	const { toggled } = useMenuToggle();
+	const { toggled } = useMenuToggle(LobeHeaderContext);
 	return (
 		<LobeDLButton
 			reachable={toggled}
@@ -80,7 +86,9 @@ export const HeaderDLButton = () => {
 };
 
 export const LobeToggleMenuProvider = ({ children }: PropsWithChildren) => (
-	<ToggleMenuContextProvider breakpoint={SCREEN_MD}>
+	<ToggleMenuContextProvider
+		breakpoint={SCREEN_MD}
+		ContextToProvide={LobeHeaderContext}>
 		{children}
 	</ToggleMenuContextProvider>
 );

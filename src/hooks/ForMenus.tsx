@@ -1,17 +1,31 @@
 'use client';
 
 import { createContext, useContext, useEffect, useState } from 'react';
-import type { Dispatch, PropsWithChildren, SetStateAction } from 'react';
+import type {
+	Context,
+	Dispatch,
+	PropsWithChildren,
+	SetStateAction,
+} from 'react';
 
-export const ToggleMenuContext = createContext<{
+type ToggleMenuContextType = Context<{
 	toggled: boolean;
 	setToggled: Dispatch<SetStateAction<boolean>>;
-}>({ toggled: false, setToggled: () => {} });
+}>;
+
+const noop: Dispatch<SetStateAction<boolean>> = () => {};
+
+export const createToggleMenuContext = () =>
+	createContext({ toggled: false, setToggled: noop });
 
 export const ToggleMenuContextProvider = ({
 	children,
 	breakpoint,
-}: PropsWithChildren & { breakpoint: number }) => {
+	ContextToProvide,
+}: PropsWithChildren & {
+	breakpoint: number;
+	ContextToProvide: ToggleMenuContextType;
+}) => {
 	const [toggled, setToggled] = useState(false);
 
 	useEffect(() => {
@@ -28,12 +42,12 @@ export const ToggleMenuContextProvider = ({
 	}, []);
 
 	return (
-		<ToggleMenuContext.Provider value={{ toggled, setToggled }}>
+		<ContextToProvide.Provider value={{ toggled, setToggled }}>
 			{children}
-		</ToggleMenuContext.Provider>
+		</ContextToProvide.Provider>
 	);
 };
 
-export const useMenuToggle = () => {
-	return useContext(ToggleMenuContext);
+export const useMenuToggle = (ContextToRead: ToggleMenuContextType) => {
+	return useContext(ContextToRead);
 };
