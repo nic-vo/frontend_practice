@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import type {
 	Context,
 	Dispatch,
@@ -46,8 +46,4 @@ export const ToggleMenuContextProvider = ({
 			{children}
 		</ContextToProvide.Provider>
 	);
-};
-
-export const useMenuToggle = (ContextToRead: ToggleMenuContextType) => {
-	return useContext(ContextToRead);
 };
