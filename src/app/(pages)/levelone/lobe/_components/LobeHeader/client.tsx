@@ -4,19 +4,18 @@ import { SCREEN_MD } from '@/consts/tailwind';
 import {
 	createToggleMenuContext,
 	ToggleMenuContextProvider,
-	useMenuToggle,
 } from '@/hooks/ForMenus';
 import { IoClose, IoMenu } from 'react-icons/io5';
 import { twMerge } from 'tailwind-merge';
 
-import type { PropsWithChildren } from 'react';
+import { useContext, type PropsWithChildren } from 'react';
 import { SafeExternalLink } from '@/components/global/Commons';
 import LobeDLButton from '../LobeDLButton';
 
 const LobeHeaderContext = createToggleMenuContext();
 
 export const LobeHeaderParent = ({ children }: PropsWithChildren) => {
-	const { toggled } = useMenuToggle(LobeHeaderContext);
+	const { toggled } = useContext(LobeHeaderContext);
 	return (
 		<header
 			className={twMerge([
@@ -29,7 +28,7 @@ export const LobeHeaderParent = ({ children }: PropsWithChildren) => {
 };
 
 export const LobeToggleNavButton = () => {
-	const { toggled, setToggled } = useMenuToggle(LobeHeaderContext);
+	const { toggled, setToggled } = useContext(LobeHeaderContext);
 	return (
 		<button
 			onClick={() => setToggled((prev) => !prev)}
@@ -43,7 +42,7 @@ export const LobeToggleNavButton = () => {
 };
 
 export const LobeToggleNav = ({ children }: PropsWithChildren) => {
-	const { toggled } = useMenuToggle(LobeHeaderContext);
+	const { toggled } = useContext(LobeHeaderContext);
 	return (
 		<nav
 			id='header-nav'
@@ -64,7 +63,7 @@ export const LobeHeaderLink = ({
 	children: React.ReactNode;
 	href: string;
 }) => {
-	const { toggled } = useMenuToggle(LobeHeaderContext);
+	const { toggled } = useContext(LobeHeaderContext);
 	return (
 		<SafeExternalLink
 			href={href}
@@ -76,7 +75,7 @@ export const LobeHeaderLink = ({
 };
 
 export const HeaderDLButton = () => {
-	const { toggled } = useMenuToggle(LobeHeaderContext);
+	const { toggled } = useContext(LobeHeaderContext);
 	return (
 		<LobeDLButton
 			reachable={toggled}
