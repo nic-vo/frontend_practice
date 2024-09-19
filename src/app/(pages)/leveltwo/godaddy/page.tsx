@@ -2,7 +2,7 @@ import { GoDHeader } from './_components';
 
 const GoDaddyHome = () => {
 	return (
-		<main>
+		<main className='first:*:z-10 *:z-0'>
 			<GoDHeader />
 			<h1>GoDaddy Clone</h1>
 			<section>
