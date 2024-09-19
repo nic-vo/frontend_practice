@@ -5,9 +5,17 @@ import {
 	createToggleMenuContext,
 	ToggleMenuContextProvider,
 } from '@/hooks/ForMenus';
-import { PropsWithChildren, useContext } from 'react';
+import { createContext, useContext, useEffect } from 'react';
 import { IoClose, IoMenu } from 'react-icons/io5';
 import { twMerge } from 'tailwind-merge';
+
+import type { Dispatch, PropsWithChildren, SetStateAction } from 'react';
+import type { ToggleMenuContextType } from '@/hooks/ForMenus';
+
+const ToggleWatcherContext = createContext<{
+	active: null | number;
+	setActive: Dispatch<SetStateAction<null | number>>;
+}>({ active: null, setActive: () => {} });
 
 export const GoDMainCategoryContext = createToggleMenuContext();
 
@@ -17,10 +25,11 @@ export const OpenGoDMainCategoryButton = () => {
 	const { toggled, setToggled } = useContext(GoDMainCategoryContext);
 	return (
 		<button
-			onClick={() => setToggled((prev) => !prev)}
+			onClick={() => setToggled(true)}
 			className='lg:hidden'
 			aria-controls={GoDMainCategoryAriaName}
-			aria-expanded={toggled}>
+			aria-expanded={toggled}
+			onFocus={() => setToggled(false)}>
 			{toggled ? <IoClose aria-hidden /> : <IoMenu aria-hidden />}
 			<span className='sr-only'>Toggle main navigation menu</span>
 		</button>
@@ -28,7 +37,7 @@ export const OpenGoDMainCategoryButton = () => {
 };
 
 export const CloseGoDMainCategoryButton = () => {
-	const { toggled, setToggled } = useContext(GoDMainCategoryContext);
+	const { setToggled } = useContext(GoDMainCategoryContext);
 	return (
 		<button
 			onClick={() => setToggled(false)}
@@ -63,3 +72,46 @@ export const GoDMainCategoryContextProvider = ({
 		{children}
 	</ToggleMenuContextProvider>
 );
+
+const SubMenuToggleButton = ({
+	children,
+	contextToRead,
+	sharedAriaID,
+	toggleWatcherIndex,
+}: Required<PropsWithChildren> & {
+	contextToRead: ToggleMenuContextType;
+	sharedAriaID: string;
+	toggleWatcherIndex: number;
+}) => {
+	const { toggled, setToggled } = useContext(contextToRead);
+	const { toggled: grandparentToggled } = useContext(GoDMainCategoryContext);
+	const { active, setActive } = useContext(ToggleWatcherContext);
+
+	useEffect(() => {
+		if (!grandparentToggled) setToggled(false);
+	}, [grandparentToggled]);
+
+	useEffect(() => {
+		if (active !== toggleWatcherIndex) setToggled(false);
+	}, [active]);
+
+	const clickHandler = () => {
+		setActive(toggleWatcherIndex);
+		setToggled(true);
+	};
+
+	return (
+		<button
+			tabIndex={grandparentToggled ? 0 : -1}
+			aria-controls={sharedAriaID}
+			aria-expanded={toggled}
+			onClick={clickHandler}>
+			{children}
+		</button>
+	);
+};
+
+const content: {
+	sharedAriaID: string;
+	contextToRead: ToggleMenuContextType;
+}[] = [{ sharedAriaID: '', contextToRead: createToggleMenuContext() }];
