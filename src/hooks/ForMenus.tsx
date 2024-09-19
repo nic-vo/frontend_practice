@@ -8,7 +8,7 @@ import type {
 	SetStateAction,
 } from 'react';
 
-type ToggleMenuContextType = Context<{
+export type ToggleMenuContextType = Context<{
 	toggled: boolean;
 	setToggled: Dispatch<SetStateAction<boolean>>;
 }>;
