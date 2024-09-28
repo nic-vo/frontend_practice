@@ -90,10 +90,8 @@ const PanelAside = ({ children }: PropsWithChildren) => {
 	return (
 		<aside
 			className={twMerge([
-				'top-0 right-0 sm:top-auto sm:bottom-2 sm:right-6 fixed z-50 h-lvh sm:h-max sm:max-h-[calc(100vh_-_1rem)] sm:rounded-3xl w-full sm:max-w-lg transition-all p-6 bg-black text-white flex flex-col gap-8',
-				toggled
-					? 'translate-x-0 sm:drop-shadow-xl'
-					: 'translate-x-full sm:translate-x-[calc(100%_+_1.5rem)]',
+				'top-0 left-full sm:top-auto sm:bottom-2 fixed z-50 h-lvh sm:h-max sm:max-h-[calc(100vh_-_1rem)] sm:rounded-l-3xl w-full sm:max-w-lg transition-all p-6 bg-black text-white flex flex-col gap-8',
+				toggled ? '-translate-x-full sm:drop-shadow-xl' : 'translate-x-0',
 			])}
 			aria-hidden={!toggled}
 			id='info-panel'>
