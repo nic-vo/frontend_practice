@@ -22,16 +22,23 @@ export const ToggleMenuContextProvider = ({
 	children,
 	breakpoint,
 	ContextToProvide,
+	checkBreakpointOnMount,
 }: PropsWithChildren & {
 	breakpoint: number;
 	ContextToProvide: ToggleMenuContextType;
+	checkBreakpointOnMount?: boolean;
 }) => {
 	const [toggled, setToggled] = useState(false);
 
 	useEffect(() => {
-		const handler = (e: UIEvent) => {
-			if (!e.view) return;
-			if (e.view.screenX > breakpoint) {
+		if (!checkBreakpointOnMount || window.innerWidth < breakpoint) return;
+		console.log('init fire');
+		setToggled(true);
+	}, []);
+
+	useEffect(() => {
+		const handler = () => {
+			if (window.innerWidth > breakpoint) {
 				setToggled(true);
 			} else {
 				setToggled(false);
