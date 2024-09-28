@@ -1,8 +1,9 @@
+import { inter } from '@/styles/fonts';
 import { GoDHeader } from './_components';
 
 const GoDaddyHome = () => {
 	return (
-		<main className='first:*:z-10 *:z-0'>
+		<main className={'first:*:z-10 *:z-0 ' + inter.className}>
 			<GoDHeader />
 			<h1>GoDaddy Clone</h1>
 			<section>
