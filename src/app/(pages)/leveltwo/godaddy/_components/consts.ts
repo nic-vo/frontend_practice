@@ -1,1 +1,3 @@
-export const GoDaddyBaseURL = 'https://www.godaddy.com/';
+export const GoDaddyBaseURL = (path: string) => {
+	return 'https://www.godaddy.com/' + path;
+};
