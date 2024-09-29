@@ -5,7 +5,7 @@ import {
 	createToggleMenuContext,
 	ToggleMenuContextProvider,
 } from '@/hooks/ForMenus';
-import { createContext, useContext, useEffect, useRef, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import { IoCaretUp, IoClose, IoMenu } from 'react-icons/io5';
 import { twMerge } from 'tailwind-merge';
 import { GoDaddyBaseURL } from '../../consts';
@@ -19,6 +19,7 @@ import {
 
 import type { Dispatch, PropsWithChildren, SetStateAction } from 'react';
 import type { ToggleMenuContextType } from '@/hooks/ForMenus';
+import { GoDHeaderStyler } from '../styling';
 
 const ToggleWatcherContext = createContext<{
 	active: null | number;
@@ -116,8 +117,7 @@ const SubMenuToggleButton = ({
 				toggled && active === toggleWatcherIndex && grandparentToggled
 			}
 			onClick={clickHandler}
-			className={twMerge([
-				'*:block w-max flex gap-2 items-center p-2 *:transition-all rounded-lg focus-visible:outline outline-neutral-950 lg:outline-emerald-400 transition-all group',
+			className={GoDHeaderStyler([
 				toggled
 					? 'text-neutral-50 bg-neutral-950 lg:text-neutral-950 lg:bg-neutral-50'
 					: 'hover:bg-neutral-200 hover:lg:bg-neutral-600',
@@ -321,10 +321,7 @@ export const FauxButtonLink = ({
 		<SafeExternalLink
 			href={href}
 			tabIndex={toggled ? 0 : -1}
-			className={twMerge([
-				'*:block flex gap-2 items-center p-2 w-max hover:bg-neutral-200 focus-visible:outline outline-black rounded-xl transition-all',
-				className,
-			])}>
+			className={GoDHeaderStyler([className ?? ''])}>
 			{children}
 		</SafeExternalLink>
 	);
