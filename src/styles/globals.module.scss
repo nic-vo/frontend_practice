@@ -1,8 +1,29 @@
-.hiddenAccessibleText {
-	display: block;
-	width: 0;
-	height: 0;
-	overflow: hidden;
-	color: transparent;
-	position: absolute;
+.customFadeIn {
+	animation: 0.5s ease-out 0s customFadeIn;
+	animation-fill-mode: both;
+}
+
+@keyframes customFadeIn {
+	0% {
+		opacity: 0
+	}
+
+	100% {
+		opacity: 1
+	}
+}
+
+.customFadeOut {
+	animation: 0.5s ease-out 0s customFadeOut;
+	animation-fill-mode: both;
+}
+
+@keyframes customFadeOut {
+	0% {
+		opacity: 1
+	}
+
+	100% {
+		opacity: 0
+	}
 }
