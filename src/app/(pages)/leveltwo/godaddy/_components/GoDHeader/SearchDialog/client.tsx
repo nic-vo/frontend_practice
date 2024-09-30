@@ -15,6 +15,9 @@ import { IoClose, IoSearch } from 'react-icons/io5';
 import { GoDaddyBaseURL } from '../../consts';
 import { SiGodaddy } from 'react-icons/si';
 import { GoDHeaderStyler } from '../styling';
+import { twMerge } from 'tailwind-merge';
+
+import AddtlAnims from '@/styles/globals.module.scss';
 
 const GoDSearchToggleContext = createContext<{
 	toggled: boolean;
@@ -46,7 +49,7 @@ export const GoDToggleSearchButton = () => {
 			aria-controls={sharedAriaID}
 			aria-expanded={toggled}
 			onClick={() => setToggled((prev) => !prev)}
-			className={GoDHeaderStyler(['hover:bg-neutral-600'])}>
+			className={GoDHeaderStyler(['hover:bg-neutral-600 outline-emerald-400'])}>
 			<IoSearch aria-hidden />
 			<span className='sr-only'>Search GoDaddy</span>
 		</button>
@@ -114,8 +117,13 @@ export const GoDSearchDialogContainer = ({ children }: PropsWithChildren) => {
 		<dialog
 			ref={ref}
 			id={sharedAriaID}
-			className='h-screen w-screen'>
-			<div>
+			className='h-screen w-screen overflow-hidden backdrop-blur-lg bg-transparent'
+			onClose={() => setToggled(false)}>
+			<div
+				className={twMerge([
+					'h-max bg-neutral-50',
+					toggled ? AddtlAnims.slideInTop : AddtlAnims.slideOutTop,
+				])}>
 				<h2 className='sr-only'>Search GoDaddy</h2>
 				<button
 					className='absolute top-2 right-2 z-10'
