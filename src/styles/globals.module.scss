@@ -1,9 +1,15 @@
-.customFadeIn {
-	animation: 0.5s ease-out 0s customFadeIn;
+@mixin animDefaults {
 	animation-fill-mode: both;
+	animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	animation-duration: 0.25s;
 }
 
-@keyframes customFadeIn {
+.fadeIn {
+	@include animDefaults;
+	animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
 	0% {
 		opacity: 0
 	}
@@ -13,17 +19,137 @@
 	}
 }
 
-.customFadeOut {
-	animation: 0.5s ease-out 0s customFadeOut;
-	animation-fill-mode: both;
+.fadeOut {
+	@include animDefaults;
+	animation-name: fadeOut;
 }
 
-@keyframes customFadeOut {
+@keyframes fadeOut {
 	0% {
 		opacity: 1
 	}
 
 	100% {
 		opacity: 0
+	}
+}
+
+.slideInTop {
+	@include animDefaults;
+	animation-name: slideInTop;
+}
+
+@keyframes slideInTop {
+	0% {
+		translate: 0 -100%
+	}
+
+	100% {
+		translate: 0 0
+	}
+}
+
+.slideOutTop {
+	@include animDefaults;
+	animation-name: slideOutTop;
+}
+
+@keyframes slideOutTop {
+	0% {
+		translate: 0 0
+	}
+
+	100% {
+		translate: 0 -100%
+	}
+}
+
+.slideInBottom {
+	@include animDefaults;
+	animation-name: slideInBottom;
+}
+
+@keyframes slideInBottom {
+	0% {
+		translate: 0 100%
+	}
+
+	100% {
+		translate: 0 0
+	}
+}
+
+.slideOutBottom {
+	@include animDefaults;
+	animation-name: slideOutBottom;
+}
+
+@keyframes slideOutBottom {
+	0% {
+		translate: 0 0
+	}
+
+	100% {
+		translate: 0 100%
+	}
+}
+
+.slideInLeft {
+	@include animDefaults;
+	animation-name: slideInLeft;
+}
+
+@keyframes slideInLeft {
+	0% {
+		translate: -100% 0
+	}
+
+	100% {
+		translate: 0 0
+	}
+}
+
+.slideOutLeft {
+	@include animDefaults;
+	animation-name: slideOutLeft;
+}
+
+@keyframes slideOutLeft {
+	0% {
+		translate: 0 0
+	}
+
+	100% {
+		translate: -100% 0
+	}
+}
+
+.slideInRight {
+	@include animDefaults;
+	animation-name: slideInRight;
+}
+
+@keyframes slideInRight {
+	0% {
+		translate: 100% 0
+	}
+
+	100% {
+		translate: 0 0
+	}
+}
+
+.slideOutRight {
+	@include animDefaults;
+	animation-name: slideOutRight;
+}
+
+@keyframes slideOutRight {
+	0% {
+		translate: 0 0
+	}
+
+	100% {
+		translate: 100% 0
 	}
 }
