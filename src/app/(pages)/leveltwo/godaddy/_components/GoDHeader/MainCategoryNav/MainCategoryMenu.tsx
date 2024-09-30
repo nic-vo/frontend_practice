@@ -178,7 +178,7 @@ const SubMenuList = ({
 			}
 			id={sharedAriaID}
 			className={twMerge([
-				'top-0 lg:top-14 lg:fixed lg:left-0 lg:w-screen flex-col gap-4 lg:flex-row grow outline focus-visible:outline-emerald-400 outline-black rounded-lg lg:rounded-none lg:-outline-offset-2 pl-8 py-4 lg:bg-neutral-50 lg:text-neutral-950',
+				'top-0 lg:top-14 lg:absolute lg:left-0 lg:w-max lg:drop-shadow flex-col gap-4 grow outline focus-visible:outline-emerald-400 outline-black rounded-lg lg:rounded-none lg:-outline-offset-2 pl-8 py-4 lg:bg-neutral-50 lg:text-neutral-950',
 				toggled && grandparentToggled && active === toggleWatcherIndex
 					? 'flex'
 					: 'hidden',
