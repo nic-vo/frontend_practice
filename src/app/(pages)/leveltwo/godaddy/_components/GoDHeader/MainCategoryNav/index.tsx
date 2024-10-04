@@ -23,7 +23,7 @@ const MainCategoryNav = () => (
 		<MainCategoryContextProvider>
 			<GoDOpenMainCategoryButton />
 			<GoDMainCategoryContainer>
-				<nav className='z-10 bg-neutral-100 text-neutral-950 h-full lg:h-auto lg:bg-transparent lg:text-inherit w-full p-2 lg:p-0 overflow-y-auto lg:overflow-visible'>
+				<nav className='z-10 text-neutral-950 h-full lg:h-auto lg:bg-transparent lg:text-inherit w-full p-2 lg:p-0 overflow-y-auto lg:overflow-visible'>
 					<ul className='flex flex-col gap-4 lg:flex-row *:flex *:flex-col *:gap-2'>
 						<li>
 							<FauxButtonLink

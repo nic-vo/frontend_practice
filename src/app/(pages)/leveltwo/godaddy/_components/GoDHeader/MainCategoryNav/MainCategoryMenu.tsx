@@ -49,7 +49,7 @@ export const GoDCloseMainCategoryButton = () => {
 	return (
 		<button
 			onClick={() => setToggled(false)}
-			className='absolute top-4 right-4 z-20 lg:hidden text-black p-2 text-2xl rounded-full hover:bg-neutral-950 hover:text-neutral-50 focus-visible:bg-neutral-950 focus-visible:text-neutral-50 outline-none'>
+			className='absolute top-4 right-4 z-20 lg:hidden text-neutral-50 p-2 text-2xl rounded-full hover:bg-neutral-50 hover:text-neutral-950 focus-visible:bg-neutral-50 focus-visible:text-neutral-950 outline-none transition-all'>
 			<IoClose aria-hidden />
 			<span className='sr-only'>Close main navigation menu</span>
 		</button>
@@ -62,7 +62,7 @@ export const GoDMainCategoryContainer = ({ children }: PropsWithChildren) => {
 		<div
 			className={twMerge([
 				toggled ? 'flex' : 'hidden lg:flex',
-				'fixed w-full lg:w-auto top-0 left-0 lg:top-auto lg:left-auto items-start lg:items-center lg:relative h-screen lg:h-auto after:z-0 after:content-[""] after:h-screen after:w-screen after:fixed lg:after:hidden after:backdrop-brightness-50 after:top-0 after:left-0 z-10',
+				'fixed w-full lg:w-auto top-0 left-0 lg:top-auto lg:left-auto items-start lg:items-center lg:relative h-screen lg:h-auto z-10 backdrop-brightness-50 backdrop-blur-lg lg:backdrop-blur-none lg:backdrop-brightness-100',
 			])}
 			aria-expanded={toggled}
 			id={MainCategoryAriaName}>
@@ -119,8 +119,8 @@ const SubMenuToggleButton = ({
 			onClick={clickHandler}
 			className={GoDHeaderStyler([
 				toggled
-					? 'text-neutral-50 bg-neutral-950 lg:text-neutral-950 lg:bg-neutral-50'
-					: 'hover:bg-neutral-200 hover:lg:bg-neutral-600',
+					? 'text-neutral-50 bg-neutral-950 lg:text-neutral-950 lg:bg-neutral-50 hover:text-neutral-50 hover:lg:text-neutral-50 hover:bg-neutral-950 hover:lg:bg-neutral-600'
+					: 'text-neutral-50  hover:bg-neutral-200 hover:lg:bg-neutral-600',
 			])}
 			disabled={!grandparentToggled}>
 			{children}
@@ -136,7 +136,7 @@ const SubMenuToggleButton = ({
 	);
 };
 
-const SubMenuLink = ({
+export const SubMenuLink = ({
 	href,
 	children,
 	toggleFromParent,
@@ -178,7 +178,7 @@ const SubMenuList = ({
 			}
 			id={sharedAriaID}
 			className={twMerge([
-				'top-0 lg:top-14 lg:absolute lg:left-0 lg:w-max lg:drop-shadow flex-col gap-4 grow outline focus-visible:outline-emerald-400 outline-black rounded-lg lg:rounded-none lg:-outline-offset-2 pl-8 py-4 lg:bg-neutral-50 lg:text-neutral-950',
+				'top-0 lg:top-14 lg:absolute lg:left-0 lg:w-max lg:drop-shadow-2xl flex-col gap-4 grow focus-visible:outline outline-black rounded-lg lg:rounded-none lg:-outline-offset-2 p-4 lg:text-neutral-950 bg-neutral-50',
 				toggled && grandparentToggled && active === toggleWatcherIndex
 					? 'flex'
 					: 'hidden',
