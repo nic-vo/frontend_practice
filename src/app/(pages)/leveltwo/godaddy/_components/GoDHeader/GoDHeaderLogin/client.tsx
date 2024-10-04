@@ -39,14 +39,16 @@ export const GoDLoginToggleButton = () => {
 			aria-controls={sharedAriaID}>
 			<IoPersonOutline
 				aria-hidden
-				className='lg:hidden'
+				className='text-2xl lg:hidden'
 			/>
 			<span className='sr-only lg:not-sr-only'>Sign in</span>
 			<IoCaretForward
 				aria-hidden
-				className={
-					'group-hover:rotate-0 ' + toggled ? '-rotate-90' : 'rotate-90'
-				}
+				className={twMerge([
+					'hidden lg:block',
+					'group-hover:rotate-0',
+					toggled ? '-rotate-90' : 'rotate-90',
+				])}
 			/>
 		</button>
 	);
@@ -55,21 +57,21 @@ export const GoDLoginToggleButton = () => {
 export const GoDLoginContainer = ({ children }: PropsWithChildren) => {
 	const { toggled, setToggled } = useContext(GoDLoginContext);
 	return (
-		<nav
+		<div
 			id={sharedAriaID}
 			aria-expanded={toggled}
 			className={twMerge([
-				'top-0 lg:top-14 lg:fixed lg:left-0 lg:w-screen flex-col gap-4 lg:flex-row grow outline focus-visible:outline-emerald-400 outline-black rounded-lg lg:rounded-none lg:-outline-offset-2 pl-8 py-4 lg:bg-neutral-50 lg:text-neutral-950',
 				toggled ? 'flex' : 'hidden',
+				'fixed lg:absolute w-full lg:w-auto top-0 lg:top-14 left-0 lg:left-auto lg:right-0 lg:drop-shadow-2xl items-start lg:items-center h-screen lg:h-auto z-10 backdrop-brightness-50 backdrop-blur-lg lg:backdrop-blur-none lg:backdrop-brightness-100 lg:text-neutral-950 lg:bg-neutral-50 p-8',
 			])}>
 			<button
 				onClick={() => setToggled(false)}
-				className='absolute top-2 right-2 z-10'>
+				className='absolute top-2 right-2 z-10 lg:hidden text-xl p-2 rounded-full transition-all text-neutral-50 bg-transparent hover:text-neutral-950 hover:bg-neutral-50 focus-visible:text-neutral-950 focus-visible:bg-neutral-50'>
 				<IoClose aria-hidden />
 				<span className='sr-only'>Close login menu</span>
 			</button>
-			{children}
-		</nav>
+			<nav className='flex flex-col divide-y'>{children}</nav>
+		</div>
 	);
 };
 
@@ -81,7 +83,8 @@ export const GoDLoginLink = ({
 	return (
 		<SafeExternalLink
 			href={href}
-			tabIndex={toggled ? 0 : -1}>
+			tabIndex={toggled ? 0 : -1}
+			className='underline underline-offset-4 lg:text-emerald-600 focus-visible:outline outline-emerald-400 outline-offset-4 w-max'>
 			{children}
 		</SafeExternalLink>
 	);
