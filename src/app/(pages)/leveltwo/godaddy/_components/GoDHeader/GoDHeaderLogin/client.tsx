@@ -30,7 +30,7 @@ export const GoDLoginToggleButton = () => {
 		<button
 			onClick={() => setToggled((prev) => !prev)}
 			className={GoDHeaderStyler([
-				'group',
+				'group outline-emerald-400 hover:lg:text-neutral-950',
 				toggled
 					? 'bg-neutral-50 text-neutral-950'
 					: 'text-neutral-50 bg-transparent',

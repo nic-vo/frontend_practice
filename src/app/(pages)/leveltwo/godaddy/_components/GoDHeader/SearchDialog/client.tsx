@@ -49,7 +49,9 @@ export const GoDToggleSearchButton = () => {
 			aria-controls={sharedAriaID}
 			aria-expanded={toggled}
 			onClick={() => setToggled((prev) => !prev)}
-			className={GoDHeaderStyler(['hover:bg-neutral-600 outline-emerald-400'])}>
+			className={GoDHeaderStyler([
+				'text-2xl hover:bg-neutral-600 outline-emerald-400 hover:text-neutral-50',
+			])}>
 			<IoSearch aria-hidden />
 			<span className='sr-only'>Search GoDaddy</span>
 		</button>
