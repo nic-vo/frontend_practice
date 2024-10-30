@@ -16,8 +16,7 @@ const GoDLoginContext = createToggleMenuContext();
 export const GoDLoginContextProvider = ({ children }: PropsWithChildren) => (
 	<ToggleMenuContextProvider
 		breakpoint={SCREEN_LG}
-		ContextToProvide={GoDLoginContext}
-		checkBreakpointOnMount>
+		ContextToProvide={GoDLoginContext}>
 		{children}
 	</ToggleMenuContextProvider>
 );
