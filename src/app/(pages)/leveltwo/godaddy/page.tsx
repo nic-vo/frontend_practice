@@ -1,11 +1,17 @@
 import { inter } from '@/styles/fonts';
-import { GoDHeader } from './_components';
+import { GoDDomainSearch, GoDHeader } from './_components';
+import { GoDAIHero } from './_content';
 
 const GoDaddyHome = () => {
 	return (
 		<main className={'first:*:z-10 *:z-0 ' + inter.className}>
 			<GoDHeader />
-			<h1>GoDaddy Clone</h1>
+			<h1 className='sr-only'>GoDaddy Clone</h1>
+			<GoDDomainSearch />
+			<GoDAIHero />
+			<section>
+				<h2>What&apos;s up first for your business?</h2>
+			</section>
 			<section>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
 				reprehenderit, ipsum maxime odio tenetur animi tempora neque optio
